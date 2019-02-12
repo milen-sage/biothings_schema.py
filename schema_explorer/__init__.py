@@ -3,9 +3,11 @@ from .utils import *
 import networkx as nx
 import tabletext
 import os
+from .curie import uri2curie, curie2uri
+from rdflib import Graph, Namespace, plugin, query
 
 _ROOT = os.path.abspath(os.path.dirname(__file__))
-
+namespaces = dict(rdf=Namespace("http://www.w3.org/1999/02/22-rdf-syntax-ns#"))
 
 class SchemaValidator():
     """Validate Schema against SchemaOrg standard
@@ -267,7 +269,7 @@ class SchemaExplorer():
         """
         class_info = {'properties': self.find_all_class_properties(schema_class),
                       'description': self.schema_nx.node[schema_class]['description'],
-                      'uri': self.curie2uri(self.schema_nx.node[schema_class]["uri"]),
+                      'uri': curie2uri(self.schema_nx.node[schema_class]["uri"], namespaces),
                       'usage': self.find_class_usages(schema_class),
                       'child_classes': self.find_child_classes(schema_class),
                       'parent_classes': self.find_parent_classes(schema_class)}
@@ -282,7 +284,7 @@ class SchemaExplorer():
                 if record["rdfs:label"] == schema_property:
                     property_info["id"] = record["rdfs:label"]
                     property_info["description"] = record["rdfs:comment"]
-                    property_info["uri"] = self.curie2uri(record["@id"])
+                    property_info["uri"] = curie2uri(record["@id"], namespaces)
                     p_domain = dict2list(record["schema:domainIncludes"])
                     property_info["domain"] = unlist([self.uri2label(record["@id"]) for record in p_domain])
                     p_range = dict2list(record["schema:rangeIncludes"])

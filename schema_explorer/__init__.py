@@ -328,6 +328,23 @@ class SchemaExplorer():
         }
         return template
 
+
+    def edit_class(self, class_info):
+        """Edit an existing class into schema
+        """ 
+        for i, schema_class in enumerate(self.schema["@graph"]):
+            if schema_class["rdfs:label"] == class_info["rdfs:label"]:
+                validate_class_schema(class_info)
+
+                self.schema["@graph"][i] = class_info
+                break
+
+        
+        validate_schema(self.schema)
+        print("Edited the class {} successfully!".format(class_info["rdfs:label"]))
+        self.schema_nx = load_schema_into_networkx(self.schema)
+
+
     def update_class(self, class_info):
         """Add a new class into schema
         """
@@ -336,6 +353,7 @@ class SchemaExplorer():
         validate_schema(self.schema)
         print("Updated the class {} successfully!".format(class_info["rdfs:label"]))
         self.schema_nx = load_schema_into_networkx(self.schema)
+
 
     def update_property(self, property_info):
         """Add a new property into schema

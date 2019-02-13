@@ -1,0 +1,90 @@
+digraph {
+	Assay -> Device
+	Assay -> Scale
+	Assay -> "In vivo bioluminescence"
+	Assay -> Immunohistochemistry
+	Assay -> "NOMe-Seq"
+	Assay -> "FIA-MSMS"
+	Assay -> "UPLC-MSMS"
+	Assay -> RnaSeq
+	Assay -> MirnaSeq
+	Assay -> "LC-MSMS"
+	Assay -> "LC-MS"
+	Assay -> LncrnaSeq
+	Assay -> ExomeSeq
+	Assay -> ChIPSeq
+	Assay -> RnaArray
+	Assay -> SnpArray
+	Assay -> MethylationArray
+	Assay -> MirnaArray
+	Assay -> BisulfiteSeq
+	Assay -> ATACSeq
+	Assay -> "HI-C"
+	Assay -> ErrBisulfiteSeq
+	Assay -> ISOSeq
+	Assay -> MRI
+	Assay -> WesternBlot
+	Assay -> WholeGenomeSeq
+	Assay -> PolymeraseChainReaction
+	Assay -> CellViabilityAssay
+	Assay -> AtomicForceMicroscopy
+	Assay -> BrightfieldMicroscopy
+	Assay -> TractionForceMicroscopy
+	Assay -> NextGenerationTargetedSequencing
+	Assay -> JumpingLibrary
+	Assay -> "MIB/MS"
+	Assay -> ScCGIseq
+	Assay -> MudPIT
+	Assay -> Questionnaire
+	Assay -> "DNA optical mapping"
+	Assay -> "Novelty response behavior"
+	Assay -> "Active avoidance learning behavior"
+	Assay -> "OxBS-Seq"
+	Assay -> "Ribo-Seq"
+	Assay -> RPPA
+	Assay -> AssayTarget
+	Device -> Platform
+	AssayTarget -> H3K9me3
+	AssayTarget -> H3K4me3
+	AssayTarget -> H3K4me1
+	AssayTarget -> H3K27ac
+	AssayTarget -> H3K36me3
+	AssayTarget -> H3K27me3
+	AssayTarget -> H3K9ac
+	AssayTarget -> REST
+	AssayTarget -> CTCF
+	AssayTarget -> Input
+	Platform -> HiSeq3000
+	Platform -> HiSeq2500
+	Platform -> HiSeq4000
+	Platform -> NextSeq500
+	Platform -> HiSeq2000
+	Platform -> MiSeq
+	Platform -> PsychChip
+	Platform -> "Affy5.0"
+	Platform -> "Affy6.0"
+	Platform -> PacBioRSII
+	Platform -> GAIIx
+	Platform -> "Illumina_HumanOmni1-Quadv1.0"
+	Platform -> Illumina_1M
+	Platform -> Illumina_h650
+	Platform -> Illumina_Omni2pt5M
+	Platform -> Illumina_Omni5M
+	Platform -> "Illumina MouseWG-6 v2.0 expression beadchip"
+	Platform -> Perlegen300Karray
+	Platform -> Agilent44Karray
+	Platform -> IlluminaWholeGenomeDASL
+	Platform -> IlluminaHumanHap300
+	Platform -> NanostringnCounter
+	Platform -> LTQOrbitrapXL
+	Platform -> IlluminaHumanMethylation450
+	Platform -> AffymetrixU133AB
+	Platform -> "Affymetrix Human Gene 1.0 ST Array"
+	Platform -> AffymetrixU133Plus2
+	Platform -> ConfocalImaging
+	Platform -> "IlluminaHumanHT-12_V3_0_R1"
+	Platform -> SequenomMultiplex
+	Platform -> HiSeqX
+	Platform -> "Bionano Irys"
+	Platform -> "Infinium HumanOmniExpressExome"
+}

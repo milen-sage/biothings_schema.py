@@ -1,0 +1,353 @@
+digraph {
+	Number -> Integer
+	Thing -> BiologicalEntity
+	Thing -> OntologyClass
+	Thing -> InformationContentEntity
+	Thing -> PlanetaryEntity
+	Thing -> ClinicalEntity
+	Thing -> Occurrent
+	Thing -> BehavioralEntity
+	Thing -> Assay
+	BiologicalEntity -> OrganismalEntity
+	BiologicalEntity -> DiseaseOrPhenotypicFeature
+	BiologicalEntity -> Environment
+	BiologicalEntity -> MolecularEntity
+	BiologicalEntity -> BiologicalProcessOrActivity
+	OntologyClass -> RelationshipType
+	OntologyClass -> GeneOntologyClass
+	OntologyClass -> OrganismTaxon
+	OrganismalEntity -> IndividualOrganism
+	OrganismalEntity -> PopulationOfIndividualOrganisms
+	OrganismalEntity -> Biosample
+	OrganismalEntity -> AnatomicalEntity
+	OrganismalEntity -> LifeStage
+	IndividualOrganism -> Case
+	PopulationOfIndividualOrganisms -> Species
+	Biosample -> CellLine
+	Biosample -> SpecimenID
+	Biosample -> SpecimenIdSource
+	DiseaseOrPhenotypicFeature -> Disease
+	DiseaseOrPhenotypicFeature -> PhenotypicFeature
+	Disease -> Diagnosis
+	Environment -> DrugExposure
+	Environment -> Treatment
+	InformationContentEntity -> ConfidenceLevel
+	InformationContentEntity -> EvidenceType
+	InformationContentEntity -> Publication
+	EvidenceType -> Assay
+	EvidenceType -> DataEntity
+	EvidenceType -> IndividualIdSource
+	EvidenceType -> IndividualID
+	EvidenceType -> IsMultiIndividual
+	EvidenceType -> IsMultiSpecimen
+	MolecularEntity -> ChemicalSubstance
+	MolecularEntity -> GenomicEntity
+	MolecularEntity -> GeneFamily
+	MolecularEntity -> MetabolicEntity
+	MolecularEntity -> ProteomicEntity
+	ChemicalSubstance -> Drug
+	ChemicalSubstance -> Metabolite
+	Drug -> DrugScreen
+	AnatomicalEntity -> CellularComponent
+	AnatomicalEntity -> Cell
+	AnatomicalEntity -> GrossAnatomicalStructure
+	AnatomicalEntity -> Organ
+	AnatomicalEntity -> Tissue
+	PlanetaryEntity -> EnvironmentalProcess
+	PlanetaryEntity -> EnvironmentalFeature
+	PlanetaryEntity -> GeographicLocation
+	ClinicalEntity -> ClinicalTrial
+	ClinicalEntity -> ClinicalIntervention
+	Device -> Platform
+	Assay -> Device
+	Assay -> Scale
+	Assay -> "In vivo bioluminescence"
+	Assay -> Immunohistochemistry
+	Assay -> "NOMe-Seq"
+	Assay -> "FIA-MSMS"
+	Assay -> "UPLC-MSMS"
+	Assay -> RnaSeq
+	Assay -> MirnaSeq
+	Assay -> "LC-MSMS"
+	Assay -> "LC-MS"
+	Assay -> LncrnaSeq
+	Assay -> ExomeSeq
+	Assay -> ChIPSeq
+	Assay -> RnaArray
+	Assay -> SnpArray
+	Assay -> MethylationArray
+	Assay -> MirnaArray
+	Assay -> BisulfiteSeq
+	Assay -> ATACSeq
+	Assay -> "HI-C"
+	Assay -> ErrBisulfiteSeq
+	Assay -> ISOSeq
+	Assay -> MRI
+	Assay -> WesternBlot
+	Assay -> WholeGenomeSeq
+	Assay -> PolymeraseChainReaction
+	Assay -> CellViabilityAssay
+	Assay -> AtomicForceMicroscopy
+	Assay -> BrightfieldMicroscopy
+	Assay -> TractionForceMicroscopy
+	Assay -> NextGenerationTargetedSequencing
+	Assay -> JumpingLibrary
+	Assay -> "MIB/MS"
+	Assay -> ScCGIseq
+	Assay -> MudPIT
+	Assay -> Questionnaire
+	Assay -> "DNA optical mapping"
+	Assay -> "Novelty response behavior"
+	Assay -> "Active avoidance learning behavior"
+	Assay -> "OxBS-Seq"
+	Assay -> "Ribo-Seq"
+	Assay -> RPPA
+	Assay -> AssayTarget
+	GenomicEntity -> Genome
+	GenomicEntity -> Transcript
+	GenomicEntity -> Exon
+	GenomicEntity -> CodingSequence
+	GenomicEntity -> MacromolecularMachine
+	GenomicEntity -> Genotype
+	GenomicEntity -> Haplotype
+	GenomicEntity -> SequenceVariant
+	Genome -> GeneExpression
+	Transcript -> IsoformExpression
+	MacromolecularMachine -> GeneOrGeneProduct
+	MacromolecularMachine -> MacromolecularComplex
+	GeneOrGeneProduct -> Gene
+	GeneOrGeneProduct -> GeneProduct
+	GeneProduct -> Protein
+	GeneProduct -> GeneProductIsoform
+	GeneProduct -> RnaProduct
+	Protein -> ProteinIsoform
+	Protein -> H3K9me3
+	Protein -> H3K4me3
+	Protein -> H3K4me1
+	Protein -> H3K27ac
+	Protein -> H3K36me3
+	Protein -> H3K27me3
+	Protein -> H3K9ac
+	Protein -> CTCF
+	RnaProduct -> RnaProductIsoform
+	RnaProduct -> NoncodingRnaProduct
+	NoncodingRnaProduct -> Microrna
+	SequenceVariant -> GenomicVariants
+	GeographicLocation -> GeographicLocationAtTime
+	Occurrent -> ActivityAndBehavior
+	Occurrent -> Procedure
+	Occurrent -> Phenomenon
+	BiologicalProcessOrActivity -> MolecularActivity
+	BiologicalProcessOrActivity -> BiologicalProcess
+	MolecularActivity -> ChromatinActivity
+	BiologicalProcess -> Pathway
+	BiologicalProcess -> PhysiologicalProcess
+	PhysiologicalProcess -> CellularPhysiology
+	Cell -> CellType
+	Cell -> TerminalDifferentiationPoint
+	CellLine -> IsCellLine
+	CellLine -> IsPrimaryCell
+	DataEntity -> Data
+	Data -> DataSubtype
+	Data -> DataType
+	BehavioralEntity -> "Behavior process"
+	MetabolicEntity -> Metabolomics
+	ProteomicEntity -> Proteomics
+	ProteomicEntity -> Kinomics
+	AssayTarget -> H3K9me3
+	AssayTarget -> H3K4me3
+	AssayTarget -> H3K4me1
+	AssayTarget -> H3K27ac
+	AssayTarget -> H3K36me3
+	AssayTarget -> H3K27me3
+	AssayTarget -> H3K9ac
+	AssayTarget -> REST
+	AssayTarget -> CTCF
+	AssayTarget -> Input
+	DataSubtype -> DataMatrix
+	DataSubtype -> Raw
+	DataSubtype -> Processed
+	DataSubtype -> Metadata
+	Organ -> "Lymph node"
+	Organ -> Kidney
+	Organ -> Skin
+	Organ -> "Mammary gland"
+	Organ -> Nerves
+	Organ -> Brain
+	Organ -> Blood
+	Organ -> Breast
+	Organ -> Colon
+	Organ -> Lung
+	Organ -> Prostate
+	Organ -> Pancreas
+	Organ -> Ovary
+	Organ -> Spleen
+	Organ -> "Bone marrow"
+	Organ -> "Bursa Of Fabricius"
+	DataType -> GenomicVariants
+	DataType -> "Behavior process"
+	DataType -> Metabolomics
+	DataType -> Image
+	DataType -> GeneExpression
+	DataType -> IsoformExpression
+	DataType -> Proteomics
+	DataType -> Kinomics
+	DataType -> DrugScreen
+	DataType -> CellularPhysiology
+	DataType -> ChromatinActivity
+	DataType -> SurveyData
+	DataType -> Network
+	IndividualIdSource -> "NIMH-HBCC"
+	IndividualIdSource -> MSSM
+	IndividualIdSource -> Penn
+	IndividualIdSource -> Pitt
+	IndividualIdSource -> Rush
+	Tissue -> "Medial orbital frontal cortex"
+	Tissue -> "Medial prefrontal cortex"
+	Tissue -> "Medial dorsal nucleus of thalamus"
+	Tissue -> "Inferior temporal cortex"
+	Tissue -> "Posterior inferior parietal cortex"
+	Tissue -> Midbrain
+	Tissue -> "Cerebral cortex"
+	Tissue -> "Frontal lobe"
+	Tissue -> Hippocampus
+	Tissue -> "Nerve tissue"
+	Tissue -> "Dorsolateral prefrontal cortex"
+	Tissue -> "Anterior cingulate cortex"
+	Tissue -> "Frontal pole"
+	Tissue -> "Parahippocampal gyrus"
+	Tissue -> "Superior temporal gyrus"
+	Tissue -> "Inferior frontal gyrus"
+	Tissue -> Cerebellum
+	Tissue -> "Occipital visual cortex"
+	Tissue -> "Inferior temporal gyrus"
+	Tissue -> "Middle temporal gyrus"
+	Tissue -> "Posterior cingulate cortex"
+	Tissue -> "Temporal pole"
+	Tissue -> "Precentral gyrus"
+	Tissue -> "Superior parietal lobe"
+	Tissue -> "Prefrontal cortex"
+	Tissue -> Amygdala
+	Tissue -> "Caudate nucleus"
+	Tissue -> "Nucleus accumbens"
+	Tissue -> Putamen
+	Tissue -> "Temporal cortex"
+	Tissue -> "Orbitofrontal cortex"
+	Tissue -> "Ventrolateral prefrontal cortex"
+	Tissue -> "Medial frontal cortex"
+	Tissue -> "Primary motor cortex"
+	Tissue -> "Primary somatosensory cortex"
+	Tissue -> "Posteroinferior parietal cortex"
+	Tissue -> "Primary auditory cortex"
+	Tissue -> "Posterior superior temporal cortex"
+	Tissue -> "Inferolateral temporal cortex"
+	Tissue -> "Primary visual cortex"
+	Tissue -> "Amygdaloid complex"
+	Tissue -> Striatum
+	Tissue -> "Cerebellar cortex"
+	Tissue -> Serum
+	Tissue -> Plasma
+	Tissue -> Splenocyte
+	Tissue -> Blood
+	Tissue -> "Primary tumor"
+	Tissue -> "Embryonic tissue"
+	Tissue -> Meninges
+	Tissue -> Forebrain
+	Tissue -> "Middle frontal gyrus"
+	Tissue -> "Cortical plate"
+	Tissue -> "VZ/SVZ"
+	Tissue -> "Dorsal pallium"
+	Tissue -> "Bone marrow"
+	Tissue -> "Buccal Mucosa"
+	Tissue -> "Dorsal Root Ganglion"
+	Platform -> HiSeq3000
+	Platform -> HiSeq2500
+	Platform -> HiSeq4000
+	Platform -> NextSeq500
+	Platform -> HiSeq2000
+	Platform -> MiSeq
+	Platform -> PsychChip
+	Platform -> "Affy5.0"
+	Platform -> "Affy6.0"
+	Platform -> PacBioRSII
+	Platform -> GAIIx
+	Platform -> "Illumina_HumanOmni1-Quadv1.0"
+	Platform -> Illumina_1M
+	Platform -> Illumina_h650
+	Platform -> Illumina_Omni2pt5M
+	Platform -> Illumina_Omni5M
+	Platform -> "Illumina MouseWG-6 v2.0 expression beadchip"
+	Platform -> Perlegen300Karray
+	Platform -> Agilent44Karray
+	Platform -> IlluminaWholeGenomeDASL
+	Platform -> IlluminaHumanHap300
+	Platform -> NanostringnCounter
+	Platform -> LTQOrbitrapXL
+	Platform -> IlluminaHumanMethylation450
+	Platform -> AffymetrixU133AB
+	Platform -> "Affymetrix Human Gene 1.0 ST Array"
+	Platform -> AffymetrixU133Plus2
+	Platform -> ConfocalImaging
+	Platform -> "IlluminaHumanHT-12_V3_0_R1"
+	Platform -> SequenomMultiplex
+	Platform -> HiSeqX
+	Platform -> "Bionano Irys"
+	Platform -> "Infinium HumanOmniExpressExome"
+	CellType -> "Schwann cell precusor"
+	CellType -> "B-lymphocytes"
+	CellType -> "Embryonic stem cells"
+	CellType -> IPSC
+	CellType -> "IPSC-derived telencephalic organoids"
+	CellType -> "GABAergic neurons"
+	CellType -> Monocytes
+	CellType -> Microglia
+	CellType -> Macrophages
+	CellType -> Astrocytes
+	CellType -> "SH-SY5Y"
+	CellType -> "GLUtamatergic neurons"
+	CellType -> "NeuN+"
+	CellType -> "NeuN-"
+	CellType -> Epithelial
+	CellType -> "Epithelial-like"
+	CellType -> Fibroblast
+	CellType -> Round
+	CellType -> Lymphoblast
+	CellType -> Polygonal
+	CellType -> "CD8+ T-Cells"
+	CellType -> Arachnoid
+	CellType -> Meningioma
+	CellType -> Schwannoma
+	CellType -> Oligodendrocyte
+	CellType -> Schwann
+	CellType -> "IPSC-derived neuron"
+	CellType -> "Monocyte-derived microglia"
+	CellType -> "IPSC-derived neuronal progenitor cell"
+	CellType -> "CD138+"
+	Diagnosis -> "Bladder Cancer"
+	Diagnosis -> Leukemia
+	Diagnosis -> "Tourette Syndrome"
+	Diagnosis -> "Neurofibromatosis 1"
+	Diagnosis -> "Neurofibromatosis 2"
+	Diagnosis -> "Bipolar Disorder"
+	Diagnosis -> "Alzheimer Disease"
+	Diagnosis -> Schizophrenia
+	Diagnosis -> "Autism Spectrum Disorder"
+	Diagnosis -> "Fibrocystic Breast Disease"
+	Diagnosis -> "Breast Cancer"
+	Diagnosis -> "Colon Cancer"
+	Diagnosis -> "Lung Cancer"
+	Diagnosis -> "Prostate Cancer"
+	Diagnosis -> "Pancreatic Cancer"
+	Diagnosis -> "Skin Cancer"
+	Diagnosis -> "Brain Cancer"
+	Diagnosis -> "Ovary Cancer"
+	Diagnosis -> "Affective Disorder"
+	Diagnosis -> "Cervical Cancer"
+	Diagnosis -> "Juvenile Myelomonocytic Leukemia"
+	Species -> Human
+	Species -> Mouse
+	Species -> Rat
+	Species -> "Drosophila melanogaster"
+	Species -> "Rhesus macaque"
+	Species -> "Gallus gallus"
+}

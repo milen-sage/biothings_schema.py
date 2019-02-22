@@ -5546,7 +5546,7 @@
             }
         },
         {
-            "@id": "schema:Consortium",
+            "@id": "bts:Consortium",
             "@type": "rdfs:Class",
             "rdfs:comment": "The name of the consortium",
             "rdfs:label": "Consortium",

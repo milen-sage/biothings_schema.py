@@ -5468,6 +5468,9 @@
             "@id": "bts:FundingAgency",
             "@type": "rdfs:Class",
             "rdfs:comment": "The organization providing financial support for generation of this data.",
+            "rdfs:subClassOf": {
+                "@id": "bts:Thing"
+            },
             "rdfs:label": "FundingAgency",
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"

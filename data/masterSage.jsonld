@@ -5465,12 +5465,12 @@
             }
         },
         {
-            "@id": "schema:FundingAgency",
+            "@id": "bts:FundingAgency",
             "@type": "rdfs:Class",
             "rdfs:comment": "The organization providing financial support for generation of this data.",
             "rdfs:label": "FundingAgency",
             "schema:isPartOf": {
-                "@id": "http://schema.org"
+                "@id": "http://schema.biothings.io"
             }
         },
         {
@@ -5551,7 +5551,7 @@
             "rdfs:comment": "The name of the consortium",
             "rdfs:label": "Consortium",
             "rdfs:subClassOf": {
-                "@id": "bts:Consortium"
+                "@id": "bts:Thing"
             },
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"

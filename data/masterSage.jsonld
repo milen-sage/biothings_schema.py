@@ -5550,6 +5550,9 @@
             "@type": "rdfs:Class",
             "rdfs:comment": "The name of the consortium",
             "rdfs:label": "Consortium",
+            "rdfs:subClassOf": {
+                "@id": "bts:Consortium"
+            },
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             }

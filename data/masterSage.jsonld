@@ -5551,7 +5551,7 @@
             "rdfs:comment": "The name of the consortium",
             "rdfs:label": "Consortium",
             "schema:isPartOf": {
-                "@id": "http://schema.org"
+                "@id": "http://schema.biothings.io"
             }
         },
         {

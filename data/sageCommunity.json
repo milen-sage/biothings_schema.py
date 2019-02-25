@@ -1,6 +1,7 @@
 [
   {
       "name": "resourceType",
+      "biothingsParent":"EvidenceType",
       "description": "The type of resource being stored and annotated",
       "columnType": "STRING",
       "maximumSize" : 250,
@@ -27,9 +28,9 @@
           }
          ]
   },
-
   {
-    "name": "fundingAgency",
+    "name": "FundingAgency",
+    "biothingsParent":"Thing",
     "description": "The organization providing financial support for generation of this data.",
     "columnType": "STRING",
     "maximumSize": 250,
@@ -67,7 +68,8 @@
     ]
   },
     {
-    "name": "consortium",
+    "name": "Consortium",
+    "biothingsParent":"Thing",
     "description": "The name of the consortium",
     "columnType": "STRING",
     "maximumSize": 250,
@@ -146,6 +148,7 @@
   },
   {
     "name": "fileFormat",
+    "biothingsParent":"Data",
     "description": "Defined format of the data file, typically corresponding to extension, but sometimes indicating more general group of files produced by the same tool or software",
     "columnType": "STRING",
     "maximumSize": 250,

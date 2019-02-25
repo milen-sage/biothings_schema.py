@@ -4,8 +4,8 @@
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "schema": "http://schema.org/",
-        "xsd": "http://www.w3.org/2001/XMLSchema#"
-        "sms": "http://metaschema.synapse.com/"
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "sms": "http://metaschema.synapse.org/"
     },
     "@graph": [
         {
@@ -5400,7 +5400,7 @@
             "rdfs:label": "TerminalDifferentiationPoint",
             "rdfs:subClassOf": {
                 "@id": "bts:Cell"
-            
+            },    
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             }

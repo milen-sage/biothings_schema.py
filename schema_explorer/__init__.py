@@ -154,7 +154,7 @@ class SchemaExplorer():
     """
     def __init__(self):
         self.load_default_schema()
-        print('Preloaded with BioLink schema. Upload your own schema using "load_schema" function.')
+        #print('Preloaded with BioLink schema. Upload your own schema using "load_schema" function.')
 
     def load_schema(self, schema):
         """Load schema and convert it to networkx graph
@@ -168,6 +168,9 @@ class SchemaExplorer():
         """
         self.schema = load_default()
         self.schema_nx = load_schema_into_networkx(self.schema)
+
+    def get_nx_schema(self):
+        return self.schema_nx
 
     def full_schema_graph(self, size=None):
         edges = self.schema_nx.edges()
@@ -193,6 +196,9 @@ class SchemaExplorer():
                 for i in range(0, len(_path) - 1):
                     edges.append((_path[i], _path[i + 1]))
             return visualize(edges, size=size)
+
+    def find_children_classes(self, schema_class):
+        return self.schema_nx.successors(schema_class)
 
     def find_parent_classes(self, schema_class):
         """Find all parents of the class

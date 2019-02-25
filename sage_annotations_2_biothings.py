@@ -25,13 +25,22 @@ def first_upper(s):
 
 # path to Synapse annotations
 annotations_path = "./data"
+annotations_file = "sageCommunity.json"
+base_schema_org_file = "experimentalData.jsonld"
 
-# skip 'not applicable'
 
+# instantiate schema explorer
 se = SchemaExplorer()
+se.load_schema(os.path.join(annotations_path, base_schema_org_file))
+
+# visualize default schema
+full_schema = se.full_schema_graph()
+full_schema.render(filename=os.path.join(annotations_path, annotations_file + "biothings_schema.gv.pdf"), view = True)
+
 
 # add adhoc classes; TODO: this should be generated based on a metadata model schema
-
+'''
+# experimentalData classes
 new_class = get_class("Assay",\
           description = "The technology used to generate the data in this file",\
           subclass_of = "Thing"\
@@ -82,12 +91,10 @@ edit_class = get_class("Device",\
           subclass_of = "Assay"\
 )
 se.edit_class(edit_class)
-
+'''
 
 # load existing Synapse annotations and convert them to BioThings
 # augmenting existing BioThings schema
-
-annotations_file = "experimentalData.json"
 
 with open(os.path.join(annotations_path, annotations_file), "r") as a_f:
     synapse_annotations = json.load(a_f)
@@ -135,7 +142,7 @@ full_schema = se.full_schema_graph()
 full_schema.engine = "fdp"
 full_schema.render(filename=os.path.join(annotations_path, annotations_file + "schema.gv.pdf"), view = True)
 
-partial_schema = se.sub_schema_graph(source="Assay", direction="down")
+partial_schema = se.sub_schema_graph(source="DataEntity", direction="both")
 partial_schema.engine = "circo"
 partial_schema.render(filename=os.path.join(annotations_path, annotations_file + "partial_schema.gv.pdf"), view = True)
 

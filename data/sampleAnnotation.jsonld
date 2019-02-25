@@ -1,0 +1,24 @@
+{
+    "@context": "http://localhost:8080/sagemeta/ampadContext.jsonld",
+    "SynapseId":"syn12976725",
+    "Assay":"RPPA",
+    "DataSubtype":"raw",
+    "DataType":"DrugScreen",
+    "FileFormat":"txt",
+    "ResourceType": "ExperimentalData",
+    "CellType": "Epithelial",
+    "Diagnosis": "SkinCancer",
+    "TumorType": "Melanoma",
+    "isPrimaryCell":"False",
+    "isCellLine":"True",
+    "Tissue":"NotApplicable",
+    "Organ":"Skin",
+    "Species":"Human",
+    "Sex":"Male",
+    "SpecimenID":"NotSpecified",
+    "IndividualID":"NotSpecified",
+    "Platform":"NotSpecified",
+    "Consortium":"PSON",
+    "FundingAgency":"NIH-NCI"
+}
+

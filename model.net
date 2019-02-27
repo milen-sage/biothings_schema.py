@@ -1,0 +1,853 @@
+*vertices 416
+1 Integer 0.0 0.0 ellipse uri schema:Integer description "Data type: Integer."
+2 Number 0.0 0.0 ellipse
+3 Thing 0.0 0.0 ellipse uri schema:Thing description Thing
+4 BiologicalEntity 0.0 0.0 ellipse uri bts:BiologicalEntity description "Not defined"
+5 OntologyClass 0.0 0.0 ellipse uri bts:OntologyClass description "a concept or class in an ontology, vocabulary or thesaurus"
+6 RelationshipType 0.0 0.0 ellipse uri bts:RelationshipType description "An OWL property used as an edge label"
+7 GeneOntologyClass 0.0 0.0 ellipse uri bts:GeneOntologyClass description "an ontology class that describes a functional aspect of a gene, gene prodoct or complex"
+8 OrganismTaxon 0.0 0.0 ellipse uri bts:OrganismTaxon description "Not defined"
+9 OrganismalEntity 0.0 0.0 ellipse uri bts:OrganismalEntity description "A named entity that is either a part of an organism, a whole organism, population or clade of organisms, excluding molecular entities"
+10 IndividualOrganism 0.0 0.0 ellipse uri bts:IndividualOrganism description "Not defined"
+11 Case 0.0 0.0 ellipse uri bts:Case description "An individual organism that has a patient role in some clinical context."
+12 PopulationOfIndividualOrganisms 0.0 0.0 ellipse uri bts:PopulationOfIndividualOrganisms description "Not defined"
+13 Biosample 0.0 0.0 ellipse uri bts:Biosample description "Not defined"
+14 DiseaseOrPhenotypicFeature 0.0 0.0 ellipse uri bts:DiseaseOrPhenotypicFeature description "Either one of a disease or an individual phenotypic feature. Some knowledge resources such as Monarch treat these as distinct, others such as MESH conflate."
+15 Disease 0.0 0.0 ellipse uri bts:Disease description "Not defined"
+16 PhenotypicFeature 0.0 0.0 ellipse uri bts:PhenotypicFeature description "Not defined"
+17 Environment 0.0 0.0 ellipse uri bts:Environment description "A feature of the environment of an organism that influences one or more phenotypic features of that organism, potentially mediated by genes"
+18 InformationContentEntity 0.0 0.0 ellipse uri bts:InformationContentEntity description "a piece of information that typically describes some piece of biology or is used as support."
+19 ConfidenceLevel 0.0 0.0 ellipse uri bts:ConfidenceLevel description "Level of confidence in a statement"
+20 EvidenceType 0.0 0.0 ellipse uri bts:EvidenceType description "Class of evidence that supports an association"
+21 Publication 0.0 0.0 ellipse uri bts:Publication description "Any published piece of information. Can refer to a whole publication, or to a part of it (e.g. a figure, figure legend, or section highlighted by NLP). The scope is intended to be general and include information published on the web as well as journals."
+22 MolecularEntity 0.0 0.0 ellipse uri bts:MolecularEntity description "A gene, gene product, small molecule or macromolecule (including protein complex)"
+23 ChemicalSubstance 0.0 0.0 ellipse uri bts:ChemicalSubstance description "May be a chemical entity or a formulation with a chemical entity as active ingredient, or a complex material with multiple chemical entities as part"
+24 Drug 0.0 0.0 ellipse uri bts:Drug description "A substance intended for use in the diagnosis, cure, mitigation, treatment, or prevention of disease"
+25 Metabolite 0.0 0.0 ellipse uri bts:Metabolite description "Any intermediate or product resulting from metabolism. Includes primary and secondary metabolites."
+26 AnatomicalEntity 0.0 0.0 ellipse uri bts:AnatomicalEntity description "A subcellular location, cell type or gross anatomical part"
+27 LifeStage 0.0 0.0 ellipse uri bts:LifeStage description "A stage of development or growth of an organism, including post-natal adult stages"
+28 PlanetaryEntity 0.0 0.0 ellipse uri bts:PlanetaryEntity description "Any entity or process that exists at the level of the whole planet"
+29 EnvironmentalProcess 0.0 0.0 ellipse uri bts:EnvironmentalProcess description "Not defined"
+30 EnvironmentalFeature 0.0 0.0 ellipse uri bts:EnvironmentalFeature description "Not defined"
+31 ClinicalEntity 0.0 0.0 ellipse uri bts:ClinicalEntity description "Any entity or process that exists in the clinical domain and outside the biological realm. Diseases are placed under biological entities"
+32 ClinicalTrial 0.0 0.0 ellipse uri bts:ClinicalTrial description "Not defined"
+33 ClinicalIntervention 0.0 0.0 ellipse uri bts:ClinicalIntervention description "Not defined"
+34 Device 0.0 0.0 ellipse uri bts:Device description "A thing made or adapted for a particular purpose, especially a piece of mechanical or electronic equipment"
+35 Assay 0.0 0.0 ellipse uri bts:Assay description "The technology used to generate the data in this file"
+36 GenomicEntity 0.0 0.0 ellipse uri bts:GenomicEntity description "an entity that can either be directly located on a genome (gene, transcript, exon, regulatory region) or is encoded in a genome (protein)"
+37 Genome 0.0 0.0 ellipse uri bts:Genome description "A genome is the sum of genetic material within a cell or virion."
+38 Transcript 0.0 0.0 ellipse uri bts:Transcript description "An RNA synthesized on a DNA or RNA template by an RNA polymerase"
+39 Exon 0.0 0.0 ellipse uri bts:Exon description "A region of the transcript sequence within a gene which is not removed from the primary RNA transcript by RNA splicing"
+40 CodingSequence 0.0 0.0 ellipse uri bts:CodingSequence description "Not defined"
+41 MacromolecularMachine 0.0 0.0 ellipse uri bts:MacromolecularMachine description "A union of gene, gene product, and macromolecular complex. These are the basic units of function in a cell. They either carry out individual biological activities, or they encode molecules which do this."
+42 GeneOrGeneProduct 0.0 0.0 ellipse uri bts:GeneOrGeneProduct description "a union of genes or gene products. Frequently an identifier for one will be used as proxy for another"
+43 Gene 0.0 0.0 ellipse uri bts:Gene description "Not defined"
+44 GeneProduct 0.0 0.0 ellipse uri bts:GeneProduct description "The functional molecular product of a single gene. Gene products are either proteins or functional RNA molecules"
+45 Protein 0.0 0.0 ellipse uri bts:Protein description "A gene product that is composed of a chain of amino acid sequences and is produced by ribosome-mediated translation of mRNA"
+46 GeneProductIsoform 0.0 0.0 ellipse uri bts:GeneProductIsoform description "This is an abstract class that can be mixed in with different kinds of gene products to indicate that the gene product is intended to represent a specific isoform rather than a canonical or reference or generic product. The designation of canonical or reference may be arbitrary, or it may represent the superclass of all isoforms."
+47 ProteinIsoform 0.0 0.0 ellipse uri bts:ProteinIsoform description "Represents a protein that is a specific isoform of the canonical or reference protein. See https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4114032/"
+48 RnaProduct 0.0 0.0 ellipse uri bts:RnaProduct description "Not defined"
+49 RnaProductIsoform 0.0 0.0 ellipse uri bts:RnaProductIsoform description "Represents a protein that is a specific isoform of the canonical or reference RNA"
+50 NoncodingRnaProduct 0.0 0.0 ellipse uri bts:NoncodingRnaProduct description "Not defined"
+51 Microrna 0.0 0.0 ellipse uri bts:Microrna description "Not defined"
+52 MacromolecularComplex 0.0 0.0 ellipse uri bts:MacromolecularComplex description "Not defined"
+53 GeneFamily 0.0 0.0 ellipse uri bts:GeneFamily description "any grouping of multiple genes or gene products related by common descent"
+54 Genotype 0.0 0.0 ellipse uri bts:Genotype description "An information content entity that describes a genome by specifying the total variation in genomic sequence and/or gene expression, relative to some extablished background"
+55 Haplotype 0.0 0.0 ellipse uri bts:Haplotype description "A set of zero or more Alleles on a single instance of a Sequence[VMC]"
+56 SequenceVariant 0.0 0.0 ellipse uri bts:SequenceVariant description "An allele that varies in its sequence from what is considered the reference allele at that locus."
+57 DrugExposure 0.0 0.0 ellipse uri bts:DrugExposure description "A drug exposure is an intake of a particular chemical substance"
+58 Treatment 0.0 0.0 ellipse uri bts:Treatment description "A treatment is targeted at a disease or phenotype and may involve multiple drug 'exposures'"
+59 GeographicLocation 0.0 0.0 ellipse uri bts:GeographicLocation description "a location that can be described in lat/long coordinates"
+60 GeographicLocationAtTime 0.0 0.0 ellipse uri bts:GeographicLocationAtTime description "a location that can be described in lat/long coordinates, for a particular time"
+61 Occurrent 0.0 0.0 ellipse uri bts:Occurrent description "A processual entity"
+62 BiologicalProcessOrActivity 0.0 0.0 ellipse uri bts:BiologicalProcessOrActivity description "Either an individual molecular activity, or a collection of causally connected molecular activities"
+63 MolecularActivity 0.0 0.0 ellipse uri bts:MolecularActivity description "An execution of a molecular function carried out by a gene product or macromolecular complex."
+64 ActivityAndBehavior 0.0 0.0 ellipse uri bts:ActivityAndBehavior description "Activity or behavior of any independent integral living, organization or mechanical actor in the world"
+65 Procedure 0.0 0.0 ellipse uri bts:Procedure description "A series of actions conducted in a certain order or manner"
+66 Phenomenon 0.0 0.0 ellipse uri bts:Phenomenon description "a fact or situation that is observed to exist or happen, especially one whose cause or explanation is in question"
+67 BiologicalProcess 0.0 0.0 ellipse uri bts:BiologicalProcess description "One or more causally connected executions of molecular functions"
+68 Pathway 0.0 0.0 ellipse uri bts:Pathway description "Not defined"
+69 PhysiologicalProcess 0.0 0.0 ellipse uri bts:PhysiologicalProcess description "Not defined"
+70 CellularComponent 0.0 0.0 ellipse uri bts:CellularComponent description "A location in or around a cell"
+71 Cell 0.0 0.0 ellipse uri bts:Cell description "Not defined"
+72 CellLine 0.0 0.0 ellipse uri bts:CellLine description "Not defined"
+73 GrossAnatomicalStructure 0.0 0.0 ellipse uri bts:GrossAnatomicalStructure description "Not defined"
+74 DataEntity 0.0 0.0 ellipse uri bts:DataEntity description "A data derived entity and attributes."
+75 Data 0.0 0.0 ellipse uri bts:Data description "A piece of data (e.g. from an assay)."
+76 BehavioralEntity 0.0 0.0 ellipse uri bts:BehavioralEntity description "Entity and attributes derived from a Behavior"
+77 MetabolicEntity 0.0 0.0 ellipse uri bts:MetabolicEntity description "Entity and attributes derived from molecular metabolics"
+78 ProteomicEntity 0.0 0.0 ellipse uri bts:ProteomicEntity description "Entity and attributes derived from molecular proteomics"
+79 SpecimenID 0.0 0.0 ellipse uri bts:SpecimenID description "Identifying string linked to a particular sample or specimen"
+80 Scale 0.0 0.0 ellipse uri bts:Scale description "An instrument or machine for weighing."
+81 "In vivo bioluminescence" 0.0 0.0 ellipse uri "bts:In vivo bioluminescence" description "An imaging assay that allows detection of bioluminescence from a living organism or organisms."
+82 Immunohistochemistry 0.0 0.0 ellipse uri bts:Immunohistochemistry description "An immunostaining assay to detect and potentially localize antigens within the cells of a tissue section"
+83 NOMe-Seq 0.0 0.0 ellipse uri bts:NOMe-Seq description "Nucleosome Occupancy and Methylome Sequencing"
+84 FIA-MSMS 0.0 0.0 ellipse uri bts:FIA-MSMS description "Flow injection analysis - tandem mass spectrometer"
+85 UPLC-MSMS 0.0 0.0 ellipse uri bts:UPLC-MSMS description "Ultra performance liquid chromatography - tandem mass spectrometer."
+86 RnaSeq 0.0 0.0 ellipse uri bts:RnaSeq description "RNA Sequencing measurements"
+87 MirnaSeq 0.0 0.0 ellipse uri bts:MirnaSeq description "Small RNA measurements collected from RNA-Seq experiments"
+88 LC-MSMS 0.0 0.0 ellipse uri bts:LC-MSMS description "A method where a sample mixture is first separated by liquid chromatography before being ionised and characterised by mass-to-charge ratio and relative abundance using two mass spectrometers in series"
+89 LC-MS 0.0 0.0 ellipse uri bts:LC-MS description "A method where a sample mixture is first separated by liquid chromatography before being converted into ions which are characterised by their mass-to-charge ratio and relative abundance"
+90 LncrnaSeq 0.0 0.0 ellipse uri bts:LncrnaSeq description "Long non-coding RNA measurements collected from RNA-Seq experiments"
+91 ExomeSeq 0.0 0.0 ellipse uri bts:ExomeSeq description "Data derived from exome sequencing"
+92 ChIPSeq 0.0 0.0 ellipse uri bts:ChIPSeq description "Chromatin immuno-precipitation followed by sequencing"
+93 RnaArray 0.0 0.0 ellipse uri bts:RnaArray description "RNA measurements captured by array technology"
+94 SnpArray 0.0 0.0 ellipse uri bts:SnpArray description "SNP measurements captured by array technology"
+95 MethylationArray 0.0 0.0 ellipse uri bts:MethylationArray description "Methylation data captured by array technology"
+96 MirnaArray 0.0 0.0 ellipse uri bts:MirnaArray description "microRNA measurements captured by array technology"
+97 BisulfiteSeq 0.0 0.0 ellipse uri bts:BisulfiteSeq description "Methylation data captured by sequencing of DNA treated by a bisulfite-based chemical process"
+98 ATACSeq 0.0 0.0 ellipse uri bts:ATACSeq description "Open chromatin regions measured by sequencing DNA after assay for transposase-accessible chromatin (ATAC) treatment"
+99 HI-C 0.0 0.0 ellipse uri bts:HI-C description "Chromatin interactions detected by HI-C protocol"
+100 ErrBisulfiteSeq 0.0 0.0 ellipse uri bts:ErrBisulfiteSeq description "Data for enriched reduced representation bisulfite sequencing data"
+101 ISOSeq 0.0 0.0 ellipse uri bts:ISOSeq description "Full isoform sequencing"
+102 MRI 0.0 0.0 ellipse uri bts:MRI description "Techniques that uses magnetic fields and radiowaves to form images, typically to investigate the anatomy and physiology of the human body."
+103 WesternBlot 0.0 0.0 ellipse uri bts:WesternBlot description "A multistep process in which a mixture of proteins is separated by gel electrophoresis"
+104 WholeGenomeSeq 0.0 0.0 ellipse uri bts:WholeGenomeSeq description "Laboratory technique to sequence the complete DNA sequence of an organism's genome at a single time"
+105 PolymeraseChainReaction 0.0 0.0 ellipse uri bts:PolymeraseChainReaction description "A rapid technique for in vitro amplification of specific DNA or RNA sequences, allowing small quantities of short sequences to be analyzed without cloning"
+106 CellViabilityAssay 0.0 0.0 ellipse uri bts:CellViabilityAssay description "This assay type measures the cellular state of living or dying by measuring an indicator of life or death"
+107 AtomicForceMicroscopy 0.0 0.0 ellipse uri bts:AtomicForceMicroscopy description "Microscopy which uses a sharp spike (known as a 'tip') mounted on the end of a cantilever to scan the surface of the specimen"
+108 BrightfieldMicroscopy 0.0 0.0 ellipse uri bts:BrightfieldMicroscopy description "Microscopy where the specimen is illuminated with light transmitted from a source on the opposite side of the specimen from the objective"
+109 TractionForceMicroscopy 0.0 0.0 ellipse uri bts:TractionForceMicroscopy description "An experimental method for determining the tractions on the surface of a biological cell by obtaining measurements of the surrounding displacement field within an in vitro extracellular matrix (ECM)"
+110 NextGenerationTargetedSequencing 0.0 0.0 ellipse uri bts:NextGenerationTargetedSequencing description "A type of next generation sequencing in which specific genes or portions of genes are targeted for sequencing using amplicon-based workflow."
+111 JumpingLibrary 0.0 0.0 ellipse uri bts:JumpingLibrary description "Not defined"
+112 MIB/MS 0.0 0.0 ellipse uri bts:MIB/MS description "Kinomics assay using multiplexed kinase inhibitor beads and mass spectrometry (MIB/MS)"
+113 ScCGIseq 0.0 0.0 ellipse uri bts:ScCGIseq description "A method for genome-wide CpG island (CGI) methylation sequencing for single cells (scCGI-seq), combining methylation-sensitive restriction enzyme digestion and multiple displacement amplification for selective detection of methylated CGIs"
+114 MudPIT 0.0 0.0 ellipse uri bts:MudPIT description "MudPIT is a method for rapid and large-scale protein identification by multidimensional liquid chromatography associated with tandem mass spectrometry"
+115 Questionnaire 0.0 0.0 ellipse uri bts:Questionnaire description "A document with a set of printed or written questions with a choice of answers, devised for the purposes of a survey or statistical study."
+116 "DNA optical mapping" 0.0 0.0 ellipse uri "bts:DNA optical mapping" description "Fluorescent imaging of linearly extended DNA molecules to probe information patterns along the molecules"
+117 "Novelty response behavior" 0.0 0.0 ellipse uri "bts:Novelty response behavior" description "Behavior related to the exploration/investigation of a novel object, situation or environment."
+118 "Active avoidance learning behavior" 0.0 0.0 ellipse uri "bts:Active avoidance learning behavior" description "Avoidance learning when the action occurs."
+119 OxBS-Seq 0.0 0.0 ellipse uri bts:OxBS-Seq description "Oxidative bisulfite sequencing (oxBS-Seq) to map 5-methylcytosine and 5-hydroxymethylcytosine"
+120 Ribo-Seq 0.0 0.0 ellipse uri bts:Ribo-Seq description "Ribosome profiling (Ribo-Seq)."
+121 RPPA 0.0 0.0 ellipse uri bts:RPPA description "Reverse phase protein array (RPPA) is a an assay that measures multiple protein expression levels in a large number of biological samples simultaneously using high quality antibodies"
+122 AssayTarget 0.0 0.0 ellipse uri bts:AssayTarget description "Not defined"
+123 H3K9me3 0.0 0.0 ellipse uri bts:H3K9me3 description "Not defined"
+124 H3K4me3 0.0 0.0 ellipse uri bts:H3K4me3 description "Not defined"
+125 H3K4me1 0.0 0.0 ellipse uri bts:H3K4me1 description "Not defined"
+126 H3K27ac 0.0 0.0 ellipse uri bts:H3K27ac description "Not defined"
+127 H3K36me3 0.0 0.0 ellipse uri bts:H3K36me3 description "Not defined"
+128 H3K27me3 0.0 0.0 ellipse uri bts:H3K27me3 description "Not defined"
+129 H3K9ac 0.0 0.0 ellipse uri bts:H3K9ac description "Not defined"
+130 REST 0.0 0.0 ellipse uri bts:REST description "Not defined"
+131 CTCF 0.0 0.0 ellipse uri bts:CTCF description "Not defined"
+132 Input 0.0 0.0 ellipse uri bts:Input description "Not defined"
+133 DataSubtype 0.0 0.0 ellipse uri bts:DataSubtype description "Further qualification of dataType, which may be used to indicate the state of processing of the data, aggregation of the data, or presence of metadata."
+134 DataMatrix 0.0 0.0 ellipse uri bts:DataMatrix description "A file of data containing multiple values for multiple samples."
+135 Raw 0.0 0.0 ellipse uri bts:Raw description "Proprietary file format for mass spectrometry data from Thermo Scientific"
+136 Processed 0.0 0.0 ellipse uri bts:Processed description "A file of data generated from running one or more bioinformatics methods on a raw file."
+137 Metadata 0.0 0.0 ellipse uri bts:Metadata description "A file of clinical, technical, or other parameters that describe a dataset."
+138 Organ 0.0 0.0 ellipse uri bts:Organ description "A unique macroscopic (gross) anatomic structure that performs specific functions. It is composed of various tissues. An organ is part of an anatomic system or a body region."
+139 "Lymph node" 0.0 0.0 ellipse uri "bts:Lymph node" description "A bean-shaped organ surrounded by a connective tissue capsule."
+140 Kidney 0.0 0.0 ellipse uri bts:Kidney description "One of the two bean-shaped organs located on each side of the spine in the retroperitoneum."
+141 Skin 0.0 0.0 ellipse uri bts:Skin description "The integument of an animal (as a fur-bearing mammal or a bird) separated from the body usually with its hair or feathers."
+142 "Mammary gland" 0.0 0.0 ellipse uri "bts:Mammary gland" description "A specialized accessory gland of the skin of mammals that secretes milk. The gland is typically only developed in females, and regresses in males."
+143 Nerves 0.0 0.0 ellipse uri bts:Nerves description "Any of the filamentous bands of nervous tissue that connect parts of the nervous system with the other organs, conduct nervous impulses, and are made up of axons and dendrites together with protective and supportive structures."
+144 Brain 0.0 0.0 ellipse uri bts:Brain description "The portion of the vertebrate central nervous system that constitutes the organ of thought and neural coordination."
+145 Blood 0.0 0.0 ellipse uri bts:Blood description "A fluid that is composed of blood plasma and erythrocytes."
+146 Breast 0.0 0.0 ellipse uri bts:Breast description "The fore or ventral part of the body between the neck and the abdomen."
+147 Colon 0.0 0.0 ellipse uri bts:Colon description "The part of the large intestine that extends from the cecum to the rectum."
+148 Lung 0.0 0.0 ellipse uri bts:Lung description "One of the usually paired compound saccular thoracic organs that constitute the basic respiratory organ of air-breathing vertebrates."
+149 Prostate 0.0 0.0 ellipse uri bts:Prostate description "Lobular organ the parenchyma of which has as its parts glandular acini which are continuous with the prostatic part of the urethra."
+150 Pancreas 0.0 0.0 ellipse uri bts:Pancreas description "A large lobulated gland of vertebrates that secretes digestive enzymes and the hormones insulin and glucagon."
+151 Ovary 0.0 0.0 ellipse uri bts:Ovary description "One of the typically paired essential female reproductive organs that produce eggs and in vertebrates female sex hormones."
+152 Spleen 0.0 0.0 ellipse uri bts:Spleen description "A highly vascular ductless organ that is located in the left abdominal region near the stomach or intestine of most vertebrates and is concerned with final destruction of red blood cells, filtration and storage of blood, and production of lymphocytes."
+153 "Bone marrow" 0.0 0.0 ellipse uri "bts:Bone marrow" description "The soft, fatty, vascular tissue that fills most bone cavities and is the source of red blood cells and many white blood cells."
+154 "Bursa Of Fabricius" 0.0 0.0 ellipse uri "bts:Bursa Of Fabricius" description "An epithelial outgrowth of lymphoid tissue in the cloaca of young birds, responsible for B-lymphocyte maturation. It undergoes atrophy and involution at six months of age."
+155 DataType 0.0 0.0 ellipse uri bts:DataType description "Types of input/output data in bioinformatics pipelines"
+156 GenomicVariants 0.0 0.0 ellipse uri bts:GenomicVariants description "Genomic alterations, including single nucleotide polymorphisms, short indels and structural variants, in a genome sequence."
+157 "Behavior process" 0.0 0.0 ellipse uri "bts:Behavior process" description "The action, reaction, or performance of an organism in response to external or internal stimuli."
+158 Metabolomics 0.0 0.0 ellipse uri bts:Metabolomics description "The systematic study of metabolites, the chemical processes they are involved, and the chemical fingerprints of specific cellular processes in a whole cell, tissue, organ or organism."
+159 Image 0.0 0.0 ellipse uri bts:Image description "Biological or biomedical data that has been rendered into an image."
+160 GeneExpression 0.0 0.0 ellipse uri bts:GeneExpression description "The analysis of levels and patterns of synthesis of gene products (proteins and functional RNA) including interpretation in functional terms of gene expression data."
+161 IsoformExpression 0.0 0.0 ellipse uri bts:IsoformExpression description "Expression of protien isoforms formed from alternative splicings or other post-translational modifications of a single gene through RNA splicing mechanisms."
+162 Proteomics 0.0 0.0 ellipse uri bts:Proteomics description "Protein and peptide identification, especially in the study of whole proteomes of organisms."
+163 Kinomics 0.0 0.0 ellipse uri bts:Kinomics description "Kinomics is the study of protein kinases and protein kinase signaling."
+164 DrugScreen 0.0 0.0 ellipse uri bts:DrugScreen description "Information on drug sensitivity and molecular markers of drug response"
+165 CellularPhysiology 0.0 0.0 ellipse uri bts:CellularPhysiology description "Not defined"
+166 ChromatinActivity 0.0 0.0 ellipse uri bts:ChromatinActivity description "Chromatin activity that allow access of condensed genomic DNA and potentially control gene expression."
+167 SurveyData 0.0 0.0 ellipse uri bts:SurveyData description "A data set that contains the outcome of a survey."
+168 Network 0.0 0.0 ellipse uri bts:Network description "An interconnected system of things or people."
+169 IndividualIdSource 0.0 0.0 ellipse uri bts:IndividualIdSource description "Database or repository to which individual ID maps"
+170 NIMH-HBCC 0.0 0.0 ellipse uri bts:NIMH-HBCC description "The NIH Human Brain Collection Core"
+171 MSSM 0.0 0.0 ellipse uri bts:MSSM description "Mount Sinai NIH Brain and Tissue Repository"
+172 Penn 0.0 0.0 ellipse uri bts:Penn description "The University of Pennsylvania Alzheimer's Disease Core Center (ADCC), Penn Udall Center and the Center for Neurodegenerative Disease Research (CNDR)"
+173 Pitt 0.0 0.0 ellipse uri bts:Pitt description "The University of Pittsburgh NIH NeuroBioBank Brain and Tissue Repository"
+174 Rush 0.0 0.0 ellipse uri bts:Rush description "Rush Alzheimer's Disease Center"
+175 Tissue 0.0 0.0 ellipse uri bts:Tissue description "A tissue is a mereologically maximal collection of cells that together perform physiological function."
+176 "Medial orbital frontal cortex" 0.0 0.0 ellipse uri "bts:Medial orbital frontal cortex" description "Component of the orbtial frontal cortex. The rostral boundary is the first slice where the medial orbital gyrus became visible whereas the caudal boundary is the disappearance of the medial orbital gyrus/gyrus rectus."
+177 "Medial prefrontal cortex" 0.0 0.0 ellipse uri "bts:Medial prefrontal cortex" description "The medial prefrontal cortex (mPFC) is composed of granular cortical areas (medial areas 9 and 10) and agranular regions (areas 24, 25, and 32)"
+178 "Medial dorsal nucleus of thalamus" 0.0 0.0 ellipse uri "bts:Medial dorsal nucleus of thalamus" description "The medial dorsal nucleus (or dorsomedial nucleus of thalamus) is a large nucleus in the thalamus."
+179 "Inferior temporal cortex" 0.0 0.0 ellipse uri "bts:Inferior temporal cortex" description "Inferior Temporal (IT) Cortex is the cerebral cortex on the inferior convexity of the temporal lobe in primates including humans."
+180 "Posterior inferior parietal cortex" 0.0 0.0 ellipse uri "bts:Posterior inferior parietal cortex" description "Not defined"
+181 Midbrain 0.0 0.0 ellipse uri bts:Midbrain description "the middle division of the three primary divisions of the developing chordate brain or the corresponding part of the adult brain (in vertebrates, includes a ventral part containing the cerebral peduncles and a dorsal tectum containing the corpora quadrigemina and that surrounds the aqueduct of Sylvius connecting the third and fourth ventricles."
+182 "Cerebral cortex" 0.0 0.0 ellipse uri "bts:Cerebral cortex" description "The thin layer of gray matter on the surface of the cerebral hemisphere that develops from the telencephalon."
+183 "Frontal lobe" 0.0 0.0 ellipse uri "bts:Frontal lobe" description "Frontal lobe is the anterior-most of five lobes of the cerebral hemisphere. It is bounded by the central sulcus on its posterior border and by the longitudinal cerebral fissure on its medial border."
+184 Hippocampus 0.0 0.0 ellipse uri bts:Hippocampus description "A curved elongated ridge that extends over the floor of the descending horn of each lateral ventricle of the brain and consists of gray matter covered on the ventricular surface with white matter."
+185 "Nerve tissue" 0.0 0.0 ellipse uri "bts:Nerve tissue" description "Portion of tissue in the nervous system which consists of neurons and glial cells, and may also contain parts of the vasculature."
+186 "Dorsolateral prefrontal cortex" 0.0 0.0 ellipse uri "bts:Dorsolateral prefrontal cortex" description "Broadly-defined, consists of the lateral portions of Brodmann areas 9 - 12, of areas 45, 46, and the superior part of area 47."
+187 "Anterior cingulate cortex" 0.0 0.0 ellipse uri "bts:Anterior cingulate cortex" description "That portion of the cingulate cortex which is located within the frontal lobe (the remainder being in the parietal lobe)."
+188 "Frontal pole" 0.0 0.0 ellipse uri "bts:Frontal pole" description "Component of the frontal lobe. The rostral and caudal boundaries of the frontal pole are the superior frontal gyrus and the rostral division of the middle frontal gyrus respectively (Christine Fennama-Notestine)."
+189 "Parahippocampal gyrus" 0.0 0.0 ellipse uri "bts:Parahippocampal gyrus" description "A long convolution on the medial surface of the temporal lobe, forming the lower part of the fornicate gyrus, extending from behind the splenium corporis callosi forward along the dentate gyrus of the hippocampus from which it is demarcated by the hippocampal fissure."
+190 "Superior temporal gyrus" 0.0 0.0 ellipse uri "bts:Superior temporal gyrus" description "Component of the temporal lobe, lateral aspect. The rostral boundary is the rostral extent of the ssuperior temporal sulcus. The caudal boundary is the cauday portion of the superior temporal gyrus (posterior to becoming continuous with the supramarginal gyrus)."
+191 "Inferior frontal gyrus" 0.0 0.0 ellipse uri "bts:Inferior frontal gyrus" description "Component of the frontal lobe, lateral aspect. The rostral boundary is the first appearance of the inferior frontal sulcus whereas the caudal boundary is the precentral gyrus. The medial and lateral boundaries are the lateral bank of the inferior frontal sulcus and the medial bank of the lateral orbital sulcus and/or the circular insular sulcus respectively (Christein Fennema-Notestine)."
+192 Cerebellum 0.0 0.0 ellipse uri bts:Cerebellum description "Part of the metencephalon that lies in the posterior cranial fossa behind the brain stem."
+193 "Occipital visual cortex" 0.0 0.0 ellipse uri "bts:Occipital visual cortex" description "The area of the occipital lobe of the cerebral cortex concerned with vision."
+194 "Inferior temporal gyrus" 0.0 0.0 ellipse uri "bts:Inferior temporal gyrus" description "Component of the temporal lobe, lateral aspect. The rostral boundary is the rostral extent of the inferior temporal sulcus whereas the caudal boundary is designated as the temporo-occipital incisure on the cortical surface."
+195 "Middle temporal gyrus" 0.0 0.0 ellipse uri "bts:Middle temporal gyrus" description "Component of the temporal lobe, lateral aspect. The rostral boundary is the rostral extent of the superior temporal sulcus whereas the caudal boundary is the temporo-occipital incisure on the cortical surface."
+196 "Posterior cingulate cortex" 0.0 0.0 ellipse uri "bts:Posterior cingulate cortex" description "Component of the cingulate cortex. The rostral and caudal extent were the caudal anterior and the isthmus divisions of the cingulate cortex respectively."
+197 "Temporal pole" 0.0 0.0 ellipse uri "bts:Temporal pole" description "Anterior component of the temporal lobe (rostral boundary) extends caudally to the entorhinal cortex."
+198 "Precentral gyrus" 0.0 0.0 ellipse uri "bts:Precentral gyrus" description "Component of the frontal lobe. The appearance and disappearance of the central sulcus is the rostral and caudal boundaries of the precentral gyrus respectively."
+199 "Superior parietal lobe" 0.0 0.0 ellipse uri "bts:Superior parietal lobe" description "A superficial feature of the parietal lobe that extends from the dorsal surface of the superior parietal lobule across the margin of the parietal lobe into the precuneus."
+200 "Prefrontal cortex" 0.0 0.0 ellipse uri "bts:Prefrontal cortex" description "The prefrontal cortex is the anterior part of the frontal lobes of the brain, lying in front of the motor and premotor areas."
+201 Amygdala 0.0 0.0 ellipse uri bts:Amygdala description "The one of the four basal ganglia in each cerebral hemisphere that is part of the limbic system and consists of an almond-shaped mass of gray matter in the anterior extremity of the temporal lobe."
+202 "Caudate nucleus" 0.0 0.0 ellipse uri "bts:Caudate nucleus" description "Subcortical nucleus of telecephalic origin consisting of an elongated gray mass lying lateral to and bordering the lateral ventricle."
+203 "Nucleus accumbens" 0.0 0.0 ellipse uri "bts:Nucleus accumbens" description "A region of the brain consisting of a collection of neurons located in the forebrain ventral to the caudate and putamen (caudoputamen in rodent)."
+204 Putamen 0.0 0.0 ellipse uri bts:Putamen description "Subcortical nucleus of telencephalic , which together with the caudate nucleus, forms the striatum."
+205 "Temporal cortex" 0.0 0.0 ellipse uri "bts:Temporal cortex" description "Gray matter of the temporal region of the neocortex, located in the temporal lobe in gyrencephalic animals."
+206 "Orbitofrontal cortex" 0.0 0.0 ellipse uri "bts:Orbitofrontal cortex" description "The region of the cerebral cortex covering the basal surface of the frontal lobes."
+207 "Ventrolateral prefrontal cortex" 0.0 0.0 ellipse uri "bts:Ventrolateral prefrontal cortex" description "Is part of the prefrontal cortex, located on the inferior frontal gyrus, bounded superiorly by the inferior frontal sulcus and inferiorly by the lateral sulcus."
+208 "Medial frontal cortex" 0.0 0.0 ellipse uri "bts:Medial frontal cortex" description "Component of the orbtial frontal cortex. The rostral boundary is the first slice where the medial orbital gyrus became visible whereas the caudal boundary is the disappearance of the medial orbital gyrus/gyrus rectus."
+209 "Primary motor cortex" 0.0 0.0 ellipse uri "bts:Primary motor cortex" description "Not defined"
+210 "Primary somatosensory cortex" 0.0 0.0 ellipse uri "bts:Primary somatosensory cortex" description "The part of the cerebral cortex that receives projections from the motor thalamus and which projects to motor neurons in the brainstem and spinal cord."
+211 "Posteroinferior parietal cortex" 0.0 0.0 ellipse uri "bts:Posteroinferior parietal cortex" description "Gray matter of the parietal region of the neocortex, located in the parietal lobe of gyrencephalic animals."
+212 "Primary auditory cortex" 0.0 0.0 ellipse uri "bts:Primary auditory cortex" description "The part of the auditory cortex that is located on the superior temporal gyrus in the temporal lobe and receives point-to-point input from the ventral division of the medial geniculate complex."
+213 "Posterior superior temporal cortex" 0.0 0.0 ellipse uri "bts:Posterior superior temporal cortex" description "Not defined"
+214 "Inferolateral temporal cortex" 0.0 0.0 ellipse uri "bts:Inferolateral temporal cortex" description "Not defined"
+215 "Primary visual cortex" 0.0 0.0 ellipse uri "bts:Primary visual cortex" description "A subdivision of the cytoarchitecturally defined occipital region of cerebral cortex in the human."
+216 "Amygdaloid complex" 0.0 0.0 ellipse uri "bts:Amygdaloid complex" description "Not defined"
+217 Striatum 0.0 0.0 ellipse uri bts:Striatum description "A region of the forebrain consisting of the caudate nucleus, putamen and fundus striati."
+218 "Cerebellar cortex" 0.0 0.0 ellipse uri "bts:Cerebellar cortex" description "The superficial gray matter of the cerebellum. It consists of three layers, the stratum moleculare, stratum granulosum, and stratum purkinjense."
+219 Serum 0.0 0.0 ellipse uri bts:Serum description "Liquid derived from blood plasma that has clotting factors removed."
+220 Plasma 0.0 0.0 ellipse uri bts:Plasma description "Plasma is the fluid (noncellular) portion of the circulating blood, as distinguished from the serum that is the fluid portion of the blood obtained by removal of the fibrin clot and blood cells after coagulation."
+221 Splenocyte 0.0 0.0 ellipse uri bts:Splenocyte description "Any leukocyte that is part of a spleen."
+222 "Primary tumor" 0.0 0.0 ellipse uri "bts:Primary tumor" description "A primary tumor is the tumor at the initial site of cancer, not where the cancer may have spread or metastasized, called the secondary tumor."
+223 "Embryonic tissue" 0.0 0.0 ellipse uri "bts:Embryonic tissue" description "A portion of tissue that is part of an embryo."
+224 Meninges 0.0 0.0 ellipse uri bts:Meninges description "The three thin layers of tissue that cover and protect the brain and spinal cord."
+225 Forebrain 0.0 0.0 ellipse uri bts:Forebrain description "The most anterior region the brain including both the telencephalon and diencephalon."
+226 "Middle frontal gyrus" 0.0 0.0 ellipse uri "bts:Middle frontal gyrus" description "Component of the frontal lobe, lateral aspect"
+227 "Cortical plate" 0.0 0.0 ellipse uri "bts:Cortical plate" description "The outer neural tube region in which post-mitotic neuroblasts migrate along radial glia to form the adult cortical layers"
+228 VZ/SVZ 0.0 0.0 ellipse uri bts:VZ/SVZ description "VZ/SVZ (ventricular zone/subventricular zone) are proliferative transient zones situated near the surface of the cerebral lateral ventricles"
+229 "Dorsal pallium" 0.0 0.0 ellipse uri "bts:Dorsal pallium" description "Subdivision of pallium that is located dorsally"
+230 "Buccal Mucosa" 0.0 0.0 ellipse uri "bts:Buccal Mucosa" description "The mucosal membranes located on the inside of the cheek, in the buccal cavity.The inner lining of the cheeks."
+231 "Dorsal Root Ganglion" 0.0 0.0 ellipse uri "bts:Dorsal Root Ganglion" description "Ganglion with sensory function within the vertebral column."
+232 IndividualID 0.0 0.0 ellipse uri bts:IndividualID description "Not defined"
+233 Platform 0.0 0.0 ellipse uri bts:Platform description "Not defined"
+234 HiSeq3000 0.0 0.0 ellipse uri bts:HiSeq3000 description "Illumina HiSeq 3000"
+235 HiSeq2500 0.0 0.0 ellipse uri bts:HiSeq2500 description "Illumina HiSeq 2500"
+236 HiSeq4000 0.0 0.0 ellipse uri bts:HiSeq4000 description "Illumina HiSeq 4000"
+237 NextSeq500 0.0 0.0 ellipse uri bts:NextSeq500 description "Illumina NextSeq 500"
+238 HiSeq2000 0.0 0.0 ellipse uri bts:HiSeq2000 description "Illumina HiSeq 2000"
+239 MiSeq 0.0 0.0 ellipse uri bts:MiSeq description "Illumina MiSeq"
+240 PsychChip 0.0 0.0 ellipse uri bts:PsychChip description "Not defined"
+241 Affy5.0 0.0 0.0 ellipse uri bts:Affy5.0 description "Affymetrix Genome-Wide Human SNP 5.0 Array"
+242 Affy6.0 0.0 0.0 ellipse uri bts:Affy6.0 description "Affymetrix Genome-Wide Human SNP 6.0 Array"
+243 PacBioRSII 0.0 0.0 ellipse uri bts:PacBioRSII description "PacBio RS II"
+244 GAIIx 0.0 0.0 ellipse uri bts:GAIIx description "Not defined"
+245 Illumina_HumanOmni1-Quadv1.0 0.0 0.0 ellipse uri bts:Illumina_HumanOmni1-Quadv1.0 description "Not defined"
+246 Illumina_1M 0.0 0.0 ellipse uri bts:Illumina_1M description "Not defined"
+247 Illumina_h650 0.0 0.0 ellipse uri bts:Illumina_h650 description "Not defined"
+248 Illumina_Omni2pt5M 0.0 0.0 ellipse uri bts:Illumina_Omni2pt5M description "Not defined"
+249 Illumina_Omni5M 0.0 0.0 ellipse uri bts:Illumina_Omni5M description "Not defined"
+250 "Illumina MouseWG-6 v2.0 expression beadchip" 0.0 0.0 ellipse uri "bts:Illumina MouseWG-6 v2.0 expression beadchip" description "Whole-genome expression profiling in the mouse"
+251 Perlegen300Karray 0.0 0.0 ellipse uri bts:Perlegen300Karray description "Not defined"
+252 Agilent44Karray 0.0 0.0 ellipse uri bts:Agilent44Karray description "Not defined"
+253 IlluminaWholeGenomeDASL 0.0 0.0 ellipse uri bts:IlluminaWholeGenomeDASL description "Illumina Human Whole-Genome DASL HT"
+254 IlluminaHumanHap300 0.0 0.0 ellipse uri bts:IlluminaHumanHap300 description "Not defined"
+255 NanostringnCounter 0.0 0.0 ellipse uri bts:NanostringnCounter description "Not defined"
+256 LTQOrbitrapXL 0.0 0.0 ellipse uri bts:LTQOrbitrapXL description "LTQ Orbitrap XL Hybrid Ion Trap-Orbitrap Mass Spectrometer"
+257 IlluminaHumanMethylation450 0.0 0.0 ellipse uri bts:IlluminaHumanMethylation450 description "Illumina HumanMethylation450 BeadChip "
+258 AffymetrixU133AB 0.0 0.0 ellipse uri bts:AffymetrixU133AB description "Not defined"
+259 "Affymetrix Human Gene 1.0 ST Array" 0.0 0.0 ellipse uri "bts:Affymetrix Human Gene 1.0 ST Array" description "Affymetrix Human Gene 1.0 ST Array [transcript (gene) version] in situ oligonucleotide"
+260 AffymetrixU133Plus2 0.0 0.0 ellipse uri bts:AffymetrixU133Plus2 description "Affymetrix Human Genome U133 Plus 2.0 Array"
+261 ConfocalImaging 0.0 0.0 ellipse uri bts:ConfocalImaging description "Not defined"
+262 IlluminaHumanHT-12_V3_0_R1 0.0 0.0 ellipse uri bts:IlluminaHumanHT-12_V3_0_R1 description "Not defined"
+263 SequenomMultiplex 0.0 0.0 ellipse uri bts:SequenomMultiplex description "Not defined"
+264 HiSeqX 0.0 0.0 ellipse uri bts:HiSeqX description "Illumina HiSeq X Platform for whole-genome sequencing"
+265 "Bionano Irys" 0.0 0.0 ellipse uri "bts:Bionano Irys" description "Performs whole genome mapping in a nanoscale fluidic environment enabling the structure of the genome to be imaged and then analyzed at the single molecule level"
+266 "Infinium HumanOmniExpressExome" 0.0 0.0 ellipse uri "bts:Infinium HumanOmniExpressExome" description "Infinium HumanOmniExpressExome BeadChip"
+267 IsCellLine 0.0 0.0 ellipse uri bts:IsCellLine description "Boolean flag indicating whether or not sample source is a cell line"
+268 IsPrimaryCell 0.0 0.0 ellipse uri bts:IsPrimaryCell description "Boolean flag indicating whether or not cellType is primary"
+269 CellType 0.0 0.0 ellipse uri bts:CellType description "A cell type is a distinct morphological or functional form of cell."
+270 "Schwann cell precusor" 0.0 0.0 ellipse uri "bts:Schwann cell precusor" description "A giioblast cell that develops from a migratory neural crest cell. The SCP is embedded among neurons (axons) with minimal extracellular spaces separating them from nerve cell membranes and has no basal lamina. In rodents SCPs are the only cells in the Schwann cell linage that expresses Cdh19."
+271 B-lymphocytes 0.0 0.0 ellipse uri bts:B-lymphocytes description "A lymphocyte of B lineage with the phenotype CD19-positive and surface immunoglobulin-positive."
+272 "Embryonic stem cells" 0.0 0.0 ellipse uri "bts:Embryonic stem cells" description "Embryonic stem (ES) cells are cells derived from the inner cell mass of the early embryo that can be propagated indefinitely in the primitive undifferentiated state while remaining pluripotent."
+273 IPSC 0.0 0.0 ellipse uri bts:IPSC description "Induced pluripotent stem cells (iPS cells or iPSCs) are a type of pluripotent stem cell artificially derived from a non-pluripotent cell."
+274 "IPSC-derived telencephalic organoids" 0.0 0.0 ellipse uri "bts:IPSC-derived telencephalic organoids" description "three-dimensional neural cultures (organoids) derived from induced pluripotent stem cells."
+275 "GABAergic neurons" 0.0 0.0 ellipse uri "bts:GABAergic neurons" description "A neuron that uses GABA as a vesicular neurotransmitter."
+276 Monocytes 0.0 0.0 ellipse uri bts:Monocytes description "Myeloid mononuclear recirculating leukocyte that can act as a precursor of tissue macrophages, osteoclasts and some populations of tissue dendritic cells."
+277 Microglia 0.0 0.0 ellipse uri bts:Microglia description "The small, non-neural, interstitial cells of mesodermal origin that form part of the supporting structure of the central nervous system."
+278 Macrophages 0.0 0.0 ellipse uri bts:Macrophages description "A mononuclear phagocyte present in variety of tissues, typically differentiated from monocytes, capable of phagocytosing a variety of extracellular particulate material, including immune complexes, microorganisms, and dead cells."
+279 Astrocytes 0.0 0.0 ellipse uri bts:Astrocytes description "Astrocytes (from 'star' cells) are irregularly shaped with many long processes, including those with end-feet which form the glial (limiting) membrane and directly and indirectly contribute to the blood-brain barrier."
+280 SH-SY5Y 0.0 0.0 ellipse uri bts:SH-SY5Y description "Human neuroblastoma clonal subline of the neuroepithelioma cell line SK-N-SH that had been established in 1970 from the bone marrow biopsy of a 4-year-old girl with metastatic neuroblastoma."
+281 "GLUtamatergic neurons" 0.0 0.0 ellipse uri "bts:GLUtamatergic neurons" description "Have Glutamate receptors, which are synaptic receptors located primarily on the membranes of neuronal cells. Glutamate (the conjugate base of glutamic acid) is abundant in the human body, but particularly in the nervous system and especially prominent in the human brain."
+282 NeuN+ 0.0 0.0 ellipse uri bts:NeuN+ description "Is a neuronal nuclear antigen that is commonly used as a biomarker for neurons and NeuN immunoreactivity has been widely used to identify neurons in tissue culture to measure the neuron(positive)/glia(negative) ratio in brain regions."
+283 NeuN- 0.0 0.0 ellipse uri bts:NeuN- description "Is a neuronal nuclear antigen that is commonly used as a biomarker for neurons and NeuN immunoreactivity has been widely used to identify neurons in tissue culture to measure the neuron(positive)/glia(negative) ratio in brain regions."
+284 Epithelial 0.0 0.0 ellipse uri bts:Epithelial description "Somatic cells that cover the surface of the body and line its cavities."
+285 Epithelial-like 0.0 0.0 ellipse uri bts:Epithelial-like description "In cell morphology, epithelial-like cells are polygonal in shape with more regular dimensions, and grow attached to a substrate in discrete patches."
+286 Fibroblast 0.0 0.0 ellipse uri bts:Fibroblast description "A connective tissue cell which secretes an extracellular matrix rich in collagen and other macromolecules. Flattened and irregular in outline with branching processes; appear fusiform or spindle-shaped."
+287 Round 0.0 0.0 ellipse uri bts:Round description "A phenotype observation at the level of the cell shape where the cell is round"
+288 Lymphoblast 0.0 0.0 ellipse uri bts:Lymphoblast description "Often referred to as a blast cell. Unlike other usages of the suffix -blast a lymphoblast is a further differentiation of a lymphocyte, T- or B-, occasioned by an antigenic stimulus. The lymphoblast usually develops by enlargement of a lymphocyte, active re-entry to the S phase of the cell cycle, mitogenesis and production of much m-RNA and ribosomes."
+289 Polygonal 0.0 0.0 ellipse uri bts:Polygonal description "A polygonal face is a polygon bounded by a circuit of polygon edges, and includes the flat (plane) region inside the boundary."
+290 "CD8+ T-Cells" 0.0 0.0 ellipse uri "bts:CD8+ T-Cells" description " Is a T lymphocyte (a type of white blood cell) that kills cancer cells, cells that are infected (particularly with viruses), or cells that are damaged in other ways."
+291 Arachnoid 0.0 0.0 ellipse uri bts:Arachnoid description "An arachnoid mater is a delicate membrane that encloses the spinal cord and brain and lies between the pia mater and dura mater."
+292 Meningioma 0.0 0.0 ellipse uri bts:Meningioma description "A central nervous system cancer tissue that are manifested in the central nervous system and arise from the arachnoid 'cap' cells of the arachnoid villi in the meninges."
+293 Schwannoma 0.0 0.0 ellipse uri bts:Schwannoma description "A neoplasm that arises from SCHWANN CELLS of the cranial, peripheral, and autonomic nerves."
+294 Oligodendrocyte 0.0 0.0 ellipse uri bts:Oligodendrocyte description "A class of large neuroglial (macroglial) cells in the central nervous system. Form the insulating myelin sheath of axons in the central nervous system."
+295 Schwann 0.0 0.0 ellipse uri bts:Schwann description "Schwann cells are a variety of glial cell that keep peripheral nerve fibres (both myelinated and unmyelinated) alive."
+296 "IPSC-derived neuron" 0.0 0.0 ellipse uri "bts:IPSC-derived neuron" description "Not defined"
+297 "Monocyte-derived microglia" 0.0 0.0 ellipse uri "bts:Monocyte-derived microglia" description "Not defined"
+298 "IPSC-derived neuronal progenitor cell" 0.0 0.0 ellipse uri "bts:IPSC-derived neuronal progenitor cell" description "Not defined"
+299 CD138+ 0.0 0.0 ellipse uri bts:CD138+ description "Not defined"
+300 Diagnosis 0.0 0.0 ellipse uri bts:Diagnosis description "A diagnosis is the result of a medical investigation to identify a disorder from its signs and symptoms."
+301 "Bladder Cancer" 0.0 0.0 ellipse uri "bts:Bladder Cancer" description "A malignancy originating in tissues of the urinary bladder."
+302 Leukemia 0.0 0.0 ellipse uri bts:Leukemia description "A malignant (clonal) hematologic disorder, involving hematopoietic stem cells and characterized by the presence of primitive or atypical myeloid or lymphoid cells in the bone marrow and the blood. Leukemias are classified as acute or chronic based on the degree of cellular differentiation and the predominant cell type present. Leukemia is usually associated with anemia, fever, hemorrhagic episodes, and splenomegaly."
+303 "Tourette Syndrome" 0.0 0.0 ellipse uri "bts:Tourette Syndrome" description "Neurologic disorder manifested particularly by motor and vocal tics and associated with behavioral abnormalities. "
+304 "Neurofibromatosis 1" 0.0 0.0 ellipse uri "bts:Neurofibromatosis 1" description "(NF1) - A disease characterized by patches of skin pigmentation (cafe-au-lait spots), Lisch nodules of the iris, tumors in the peripheral nervous system and fibromatous skin tumors. Individuals with the disorder have increased susceptibility to the development of benign and malignant tumors."
+305 "Neurofibromatosis 2" 0.0 0.0 ellipse uri "bts:Neurofibromatosis 2" description "(NF2) - Genetic disorder characterized by bilateral vestibular schwannomas (formerly called acoustic neuromas), schwannomas of other cranial and peripheral nerves, meningiomas, and ependymomas. It is inherited in an autosomal dominant fashion with full penetrance."
+306 "Bipolar Disorder" 0.0 0.0 ellipse uri "bts:Bipolar Disorder" description "A mood disorder formerly characterised by alternating periods of mania and depression (and in some cases rapid cycling, mixed states, and psychotic symptoms)."
+307 "Alzheimer Disease" 0.0 0.0 ellipse uri "bts:Alzheimer Disease" description "(AD) - Alzheimer disease is a neurodegenerative disorder characterized by progressive dementia, loss of cognitive abilities, and deposition of fibrillar amyloid proteins as intraneuronal neurofibrillary tangles, extracellular amyloid plaques and vascular amyloid deposits."
+308 Schizophrenia 0.0 0.0 ellipse uri bts:Schizophrenia description "A severe emotional disorder of psychotic depth characteristically marked by a retreat from reality with delusion formation, HALLUCINATIONS, emotional disharmony, and regressive behavior."
+309 "Autism Spectrum Disorder" 0.0 0.0 ellipse uri "bts:Autism Spectrum Disorder" description "Wide continuum of associated cognitive and neurobehavioral disorders, including, but not limited to, three core-defining features: impairments in socialization, impairments in verbal and nonverbal communication, and restricted and repetitive patterns of behaviors."
+310 "Fibrocystic Breast Disease" 0.0 0.0 ellipse uri "bts:Fibrocystic Breast Disease" description "breast fibrocystic disease is a benign mammary displasia characterised by breast discomfort and 'lumpiness'."
+311 "Breast Cancer" 0.0 0.0 ellipse uri "bts:Breast Cancer" description "(BC) - A common malignancy originating from breast epithelial tissue."
+312 "Colon Cancer" 0.0 0.0 ellipse uri "bts:Colon Cancer" description "A colorectal cancer that is located_in the colon."
+313 "Lung Cancer" 0.0 0.0 ellipse uri "bts:Lung Cancer" description "A respiratory system cancer that is located_in the lung."
+314 "Prostate Cancer" 0.0 0.0 ellipse uri "bts:Prostate Cancer" description "A male reproductive organ cancer that is located_in the prostate."
+315 "Pancreatic Cancer" 0.0 0.0 ellipse uri "bts:Pancreatic Cancer" description "An endocrine gland cancer located_in the pancreas."
+316 "Skin Cancer" 0.0 0.0 ellipse uri "bts:Skin Cancer" description "An integumentary system cancer located_in the skin that is the uncontrolled growth of abnormal skin cells."
+317 "Brain Cancer" 0.0 0.0 ellipse uri "bts:Brain Cancer" description "A central nervous system cancer that is characterized by the growth of abnormal cells in the tissues of the brain."
+318 "Ovary Cancer" 0.0 0.0 ellipse uri "bts:Ovary Cancer" description "An ovarian cancer that is derives_from ovarian surface epithelium."
+319 "Affective Disorder" 0.0 0.0 ellipse uri "bts:Affective Disorder" description "Change in mood is the main underlying feature of these disorders."
+320 "Cervical Cancer" 0.0 0.0 ellipse uri "bts:Cervical Cancer" description " A malignant neoplasm of the cervix, typically originating from a dysplastic or premalignant lesion previously present at the active squamocolumnar junction. The transformation from mild dysplastic to invasive carcinoma generally occurs slowly within several years, although the rate of this process varies widely."
+321 "Juvenile Myelomonocytic Leukemia" 0.0 0.0 ellipse uri "bts:Juvenile Myelomonocytic Leukemia" description "A myelodysplastic/myeloproliferative neoplasm of childhood that is characterized by proliferation principally of the granulocytic and monocytic lineages. Myelomonocytic proliferation is seen in the bone marrow and the blood. The leukemic cells may infiltrate any tissue, however liver, spleen, lymph nodes, skin, and respiratory tract are the most common sites of involvement."
+322 IsMultiIndividual 0.0 0.0 ellipse uri bts:IsMultiIndividual description "Boolean flag indicating whether or not a file has data for multiple individuals"
+323 IsMultiSpecimen 0.0 0.0 ellipse uri bts:IsMultiSpecimen description "Boolean flag indicating whether or not a file has data for multiple specimens"
+324 SpecimenIdSource 0.0 0.0 ellipse uri bts:SpecimenIdSource description "Not defined"
+325 Species 0.0 0.0 ellipse uri bts:Species description "The name of a species (typically a taxonomic group) of organism."
+326 Human 0.0 0.0 ellipse uri bts:Human description "Homo sapiens with taxonomy ID: 9606 and Genbank common name: human"
+327 Mouse 0.0 0.0 ellipse uri bts:Mouse description "Mus musculus with taxonomy ID: 10090 and Genbank common name: house mouse"
+328 Rat 0.0 0.0 ellipse uri bts:Rat description "Rattus with taxonomy ID: 10114 and inherited blast name: rodents"
+329 "Drosophila melanogaster" 0.0 0.0 ellipse uri "bts:Drosophila melanogaster" description "Drosophila melanogaster with taxonomy ID: 7227 and Genbank common name: fruit fly"
+330 "Rhesus macaque" 0.0 0.0 ellipse uri "bts:Rhesus macaque" description "Macaca mulatta with taxonomy ID: 9544 and Genbank common name: Rhesus monkey"
+331 "Gallus gallus" 0.0 0.0 ellipse uri "bts:Gallus gallus" description "The common domestic fowl, Chicken."
+332 TerminalDifferentiationPoint 0.0 0.0 ellipse uri bts:TerminalDifferentiationPoint description "The terminal differentiation point (TD) of a cell in days."
+333 ResourceType 0.0 0.0 ellipse uri bts:ResourceType description "The type of resource being stored and annotated"
+334 ExperimentalData 0.0 0.0 ellipse uri bts:ExperimentalData description "Any file derived from or pertaining to a scientific experiment. experimentalData annotations should be applied, possibly disease-related"
+335 CuratedData 0.0 0.0 ellipse uri bts:CuratedData description "Any file derived from or pertaining a manually or programatically curated data resource. Examples include: reference sequences, drug information databases, identifier maps"
+336 Analysis 0.0 0.0 ellipse uri bts:Analysis description "Any file derived from analysis such that the analysis annotations might apply, possibly disease-related"
+337 Tool 0.0 0.0 ellipse uri bts:Tool description "Any file or link that represents a tool, model, or algorithm; the tool annotations could be applied"
+338 FundingAgency 0.0 0.0 ellipse uri bts:FundingAgency description "The organization providing financial support for generation of this data."
+339 CTF 0.0 0.0 ellipse uri bts:CTF description "Childrens' Tumor Foundation"
+340 NIH-NCI 0.0 0.0 ellipse uri bts:NIH-NCI description "National Institutes of Health - National Cancer Institute"
+341 NTAP 0.0 0.0 ellipse uri bts:NTAP description "Neurofibromatosis Therapeutic Acceleration Program"
+342 NIH-NIA 0.0 0.0 ellipse uri bts:NIH-NIA description "National Institutes of Health - National Institute of Aging"
+343 NIH-NIMH 0.0 0.0 ellipse uri bts:NIH-NIMH description "National Institutes of Health - National Institute of Mental Health"
+344 AACR 0.0 0.0 ellipse uri bts:AACR description "American Association for Cancer Research"
+345 Consortium 0.0 0.0 ellipse uri bts:Consortium description "The name of the consortium"
+346 CMC 0.0 0.0 ellipse uri bts:CMC description "CommonMind Consortium"
+347 PEC 0.0 0.0 ellipse uri bts:PEC description "PsychENCODE Consortium"
+348 AMP-AD 0.0 0.0 ellipse uri bts:AMP-AD description "Accelerating Medicines Partnership-Alzheimer's Disease"
+349 MODEL-AD 0.0 0.0 ellipse uri bts:MODEL-AD description "Model Development and Evaluation for Late Onset AD"
+350 M2OVE-AD 0.0 0.0 ellipse uri bts:M2OVE-AD description "Molecular Mechanisms of the Vascular Etiology of Alzheimer's Disease "
+351 BSMN 0.0 0.0 ellipse uri bts:BSMN description "Brain Somatic Mosaicism Network"
+352 CSBC 0.0 0.0 ellipse uri bts:CSBC description "Cancer Systems Biology Consortium"
+353 PSON 0.0 0.0 ellipse uri bts:PSON description "Physical Science in Oncology"
+354 GENIE 0.0 0.0 ellipse uri bts:GENIE description "Genomics Evidence Neoplasia Information Exchange"
+355 "Synodos NF1" 0.0 0.0 ellipse uri "bts:Synodos NF1" description "Data derived from the CTF-funded NF1 pre-clinical model Synodos project"
+356 "Synodos NF2" 0.0 0.0 ellipse uri "bts:Synodos NF2" description "Data derived from the CTF-funded NF2 Synodos project"
+357 "Synodos LGG" 0.0 0.0 ellipse uri "bts:Synodos LGG" description "Data derived from the CTF-funded NF1 LGG Synodos project"
+358 "DHART SPORE" 0.0 0.0 ellipse uri "bts:DHART SPORE" description "Data from the D-HART SPORE"
+359 FileFormat 0.0 0.0 ellipse uri bts:FileFormat description "Defined format of the data file, typically corresponding to extension, but sometimes indicating more general group of files produced by the same tool or software"
+360 "Bash script" 0.0 0.0 ellipse uri "bts:Bash script" description "Bash Shell Script"
+361 Bedgraph 0.0 0.0 ellipse uri bts:Bedgraph description "Holds a tab-delimited chromosome /start /end / datavalue dataset. The bedGraph format allows display of continuous-valued data in track format. This display type is useful for probability scores and transcriptome data"
+362 Idx 0.0 0.0 ellipse uri bts:Idx description "Not defined"
+363 Idat 0.0 0.0 ellipse uri bts:Idat description "Proprietary file format for (raw) BeadArray data used by genomewide profiling platforms from Illumina Inc. This format is output directly from the scanner and stores summary intensities for each probe-type on an array."
+364 Bam 0.0 0.0 ellipse uri bts:Bam description "BAM format, the binary, BGZF-formatted compressed version of SAM format for alignment of nucleotide sequences (e.g. sequencing reads) to (a) reference sequence(s)"
+365 Bai 0.0 0.0 ellipse uri bts:Bai description "BAM indexing format"
+366 Excel 0.0 0.0 ellipse uri bts:Excel description "Microsoft Excel spreadsheet format"
+367 Powerpoint 0.0 0.0 ellipse uri bts:Powerpoint description "Microsoft Powerpoint slide format"
+368 Tif 0.0 0.0 ellipse uri bts:Tif description "Tagged Image File Format, abbreviated TIFF or TIF, is a computer file format for storing raster graphics images"
+369 Png 0.0 0.0 ellipse uri bts:Png description "PNG is a file format for image compression"
+370 Doc 0.0 0.0 ellipse uri bts:Doc description "Microsoft Word document format"
+371 Pdf 0.0 0.0 ellipse uri bts:Pdf description "Portable Document Format"
+372 Hdf 0.0 0.0 ellipse uri bts:Hdf description "Hierarchical Data Format (HDF) is a set of file formats (HDF4, HDF5) designed to store and organize large amounts of data"
+373 Fasta 0.0 0.0 ellipse uri bts:Fasta description "FASTA format is a text-based format for representing either nucleotide sequences or peptide sequences, in which nucleotides or amino acids are represented using single-letter codes"
+374 Fastq 0.0 0.0 ellipse uri bts:Fastq description "FASTQ format is a text-based format for storing both a biological sequence (usually nucleotide sequence) and its corresponding quality scores. Both the sequence letter and quality score are each encoded with a single ASCII character for brevity"
+375 Sam 0.0 0.0 ellipse uri bts:Sam description "Sequence Alignment/Map (SAM) format for alignment of nucleotide sequences (e.g. sequencing reads) to (a) reference sequence(s)"
+376 Vcf 0.0 0.0 ellipse uri bts:Vcf description "Variant Call Format (VCF) for sequence variation (indels, polymorphisms, structural variation)"
+377 Bcf 0.0 0.0 ellipse uri bts:Bcf description "BCF, the binary version of Variant Call Format (VCF) for sequence variation (indels, polymorphisms, structural variation)"
+378 Maf 0.0 0.0 ellipse uri bts:Maf description "Multiple Alignment Format (MAF) supporting alignments of whole genomes with rearrangements, directions, multiple pieces to the alignment, and so forth"
+379 Bed 0.0 0.0 ellipse uri bts:Bed description "Browser Extensible Data (BED) format of sequence annotation track, typically to be displayed in a genome browser"
+380 Chp 0.0 0.0 ellipse uri bts:Chp description "CHP file contains probe set analysis results generated from Affymetrix software"
+381 Cel 0.0 0.0 ellipse uri bts:Cel description "Format of Affymetrix data file of information about (raw) expression levels of the individual probes"
+382 Sif 0.0 0.0 ellipse uri bts:Sif description "SIF (simple interaction file) Format - a network/pathway format used for instance in cytoscape"
+383 Tsv 0.0 0.0 ellipse uri bts:Tsv description "Tabular data represented as tab-separated values in a text file"
+384 Csv 0.0 0.0 ellipse uri bts:Csv description "Tabular data represented as comma-separated values in a text file"
+385 Txt 0.0 0.0 ellipse uri bts:Txt description "Textual format"
+386 Plink 0.0 0.0 ellipse uri bts:Plink description "Any Plink file format (MAP/PED/BED/BIM/FAM)"
+387 Bigwig 0.0 0.0 ellipse uri bts:Bigwig description "bigWig format for large sequence annotation tracks that consist of a value for each sequence position"
+388 Wiggle 0.0 0.0 ellipse uri bts:Wiggle description "Wiggle format (WIG) of a sequence annotation track that consists of a value for each sequence position"
+389 Gct 0.0 0.0 ellipse uri bts:Gct description "Tab-delimited text files of GenePattern that contain a column for each sample, a row for each gene, and an expression value for each gene in each sample"
+390 Bgzip 0.0 0.0 ellipse uri bts:Bgzip description "Blocked GNU Zip format"
+391 Seg 0.0 0.0 ellipse uri bts:Seg description "SEG file (segmented data; .seg or .cbs) is a tab-delimited text file that lists loci and associated numeric values"
+392 Html 0.0 0.0 ellipse uri bts:Html description "HTML format"
+393 Md 0.0 0.0 ellipse uri bts:Md description "Markdown (MD) is a lightweight markup language with plain text formatting syntax"
+394 Flagstat 0.0 0.0 ellipse uri bts:Flagstat description "Output of samtools flagstat tool"
+395 Gtf 0.0 0.0 ellipse uri bts:Gtf description "Gene transfer format (GTF) is a file format used to hold information about gene structure"
+396 Msf 0.0 0.0 ellipse uri bts:Msf description "Proprietary mass-spectrometry format of Thermo Scientific's ProteomeDiscoverer software"
+397 Rmd 0.0 0.0 ellipse uri bts:Rmd description "markdown document specific to r analyses"
+398 "Bed narrowPeak" 0.0 0.0 ellipse uri "bts:Bed narrowPeak" description "This format is used to provide called peaks of signal enrichment based on pooled, normalized (interpreted) data. It is a BED6+4 format."
+399 "Bed broadPeak" 0.0 0.0 ellipse uri "bts:Bed broadPeak" description "This format is used to provide called regions of signal enrichment based on pooled, normalized (interpreted) data. It is a BED 6+3 format."
+400 "Bed gappedPeak" 0.0 0.0 ellipse uri "bts:Bed gappedPeak" description "This format is used to provide called regions of signal enrichment based on pooled, normalized (interpreted) data where the regions may be spliced or incorporate gaps in the genomic sequence. It is a BED12+3 format."
+401 Avi 0.0 0.0 ellipse uri bts:Avi description "AVI files can contain both audio and video data in a file container that allows synchronous audio-with-video playback."
+402 Pzfx 0.0 0.0 ellipse uri bts:Pzfx description "A PZFX file is a Prism project created by GraphPad Prism, a scientific application used to analyze and graph data. It contains project data including graphs and layouts, notes, and tables."
+403 Fig 0.0 0.0 ellipse uri bts:Fig description "Line drawing saved in the Xfig format; stored as a vector image that may include lines, shapes, arcs, splines, arrows, and text objects; may also include images, colors, and patterns."
+404 Xml 0.0 0.0 ellipse uri bts:Xml description "eXtensible Markup Language (XML) format."
+405 Tar 0.0 0.0 ellipse uri bts:Tar description "tape archive"
+406 "R script" 0.0 0.0 ellipse uri "bts:R script" description "R Script"
+407 Abf 0.0 0.0 ellipse uri bts:Abf description "The Axon™ Binary File format (ABF) was created for the storage of binary experimental data."
+408 Bpm 0.0 0.0 ellipse uri bts:Bpm description "A beaded pool manifest. Describe the SNP or probe content on a BeadChip or in an assay pool."
+409 Dat 0.0 0.0 ellipse uri bts:Dat description "Format of Affymetrix data file of raw image data."
+410 Jpg 0.0 0.0 ellipse uri bts:Jpg description "Joint Picture Group file format for lossy graphics file."
+411 Locs 0.0 0.0 ellipse uri bts:Locs description "Illumina iScan bead location file."
+412 "Sentrix descriptor file" 0.0 0.0 ellipse uri "bts:Sentrix descriptor file" description "A BeadScan specific file needed to perform scan setting checks for different array formats and assay type."
+413 "Python script" 0.0 0.0 ellipse uri "bts:Python script" description "Python is an interpreted, object-oriented, high-level programming language with dynamic semantics."
+414 Sav 0.0 0.0 ellipse uri bts:Sav description "The SPSS Statistics File Format is a proprietary binary format, developed and maintained as the native format for the SPSS statistical software application."
+415 Sdf 0.0 0.0 ellipse uri bts:Sdf description "SDF is one of a family of chemical-data file formats developed by MDL Information Systems; it is intended especially for structural information."
+416 RData 0.0 0.0 ellipse uri bts:RData description "The RData format (usually with extension .rdata or .rda) is a format designed for use with R, a system for statistical computation and related graphics, for storing a complete R workspace or selected 'objects' from a workspace in a form that can be loaded back by R."
+*arcs
+2 1 1.0
+3 4 1.0
+3 5 1.0
+3 18 1.0
+3 28 1.0
+3 31 1.0
+3 61 1.0
+3 35 1.0
+3 76 1.0
+3 338 1.0
+3 345 1.0
+4 9 1.0
+4 14 1.0
+4 17 1.0
+4 22 1.0
+4 62 1.0
+5 6 1.0
+5 7 1.0
+5 8 1.0
+9 10 1.0
+9 12 1.0
+9 13 1.0
+9 26 1.0
+9 27 1.0
+10 11 1.0
+12 325 1.0
+13 72 1.0
+13 79 1.0
+13 324 1.0
+14 15 1.0
+14 16 1.0
+15 300 1.0
+17 57 1.0
+17 58 1.0
+18 19 1.0
+18 20 1.0
+18 21 1.0
+20 74 1.0
+20 169 1.0
+20 232 1.0
+20 322 1.0
+20 323 1.0
+20 333 1.0
+22 23 1.0
+22 36 1.0
+22 53 1.0
+22 77 1.0
+22 78 1.0
+23 24 1.0
+23 25 1.0
+24 164 1.0
+26 70 1.0
+26 71 1.0
+26 73 1.0
+26 138 1.0
+26 175 1.0
+28 29 1.0
+28 30 1.0
+28 59 1.0
+31 32 1.0
+31 33 1.0
+34 233 1.0
+35 34 1.0
+35 80 1.0
+35 81 1.0
+35 82 1.0
+35 83 1.0
+35 84 1.0
+35 85 1.0
+35 86 1.0
+35 87 1.0
+35 88 1.0
+35 89 1.0
+35 90 1.0
+35 91 1.0
+35 92 1.0
+35 93 1.0
+35 94 1.0
+35 95 1.0
+35 96 1.0
+35 97 1.0
+35 98 1.0
+35 99 1.0
+35 100 1.0
+35 101 1.0
+35 102 1.0
+35 103 1.0
+35 104 1.0
+35 105 1.0
+35 106 1.0
+35 107 1.0
+35 108 1.0
+35 109 1.0
+35 110 1.0
+35 111 1.0
+35 112 1.0
+35 113 1.0
+35 114 1.0
+35 115 1.0
+35 116 1.0
+35 117 1.0
+35 118 1.0
+35 119 1.0
+35 120 1.0
+35 121 1.0
+35 122 1.0
+36 37 1.0
+36 38 1.0
+36 39 1.0
+36 40 1.0
+36 41 1.0
+36 54 1.0
+36 55 1.0
+36 56 1.0
+37 160 1.0
+38 161 1.0
+41 42 1.0
+41 52 1.0
+42 43 1.0
+42 44 1.0
+44 45 1.0
+44 46 1.0
+44 48 1.0
+45 47 1.0
+45 123 1.0
+45 124 1.0
+45 125 1.0
+45 126 1.0
+45 127 1.0
+45 128 1.0
+45 129 1.0
+45 131 1.0
+48 49 1.0
+48 50 1.0
+50 51 1.0
+56 156 1.0
+59 60 1.0
+61 64 1.0
+61 65 1.0
+61 66 1.0
+62 63 1.0
+62 67 1.0
+63 166 1.0
+67 68 1.0
+67 69 1.0
+69 165 1.0
+71 269 1.0
+71 332 1.0
+72 267 1.0
+72 268 1.0
+74 75 1.0
+75 133 1.0
+75 155 1.0
+75 359 1.0
+76 157 1.0
+77 158 1.0
+78 162 1.0
+78 163 1.0
+122 123 1.0
+122 124 1.0
+122 125 1.0
+122 126 1.0
+122 127 1.0
+122 128 1.0
+122 129 1.0
+122 130 1.0
+122 131 1.0
+122 132 1.0
+133 134 1.0
+133 135 1.0
+133 136 1.0
+133 137 1.0
+138 139 1.0
+138 140 1.0
+138 141 1.0
+138 142 1.0
+138 143 1.0
+138 144 1.0
+138 145 1.0
+138 146 1.0
+138 147 1.0
+138 148 1.0
+138 149 1.0
+138 150 1.0
+138 151 1.0
+138 152 1.0
+138 153 1.0
+138 154 1.0
+155 156 1.0
+155 157 1.0
+155 158 1.0
+155 159 1.0
+155 160 1.0
+155 161 1.0
+155 162 1.0
+155 163 1.0
+155 164 1.0
+155 165 1.0
+155 166 1.0
+155 167 1.0
+155 168 1.0
+169 170 1.0
+169 171 1.0
+169 172 1.0
+169 173 1.0
+169 174 1.0
+175 176 1.0
+175 177 1.0
+175 178 1.0
+175 179 1.0
+175 180 1.0
+175 181 1.0
+175 182 1.0
+175 183 1.0
+175 184 1.0
+175 185 1.0
+175 186 1.0
+175 187 1.0
+175 188 1.0
+175 189 1.0
+175 190 1.0
+175 191 1.0
+175 192 1.0
+175 193 1.0
+175 194 1.0
+175 195 1.0
+175 196 1.0
+175 197 1.0
+175 198 1.0
+175 199 1.0
+175 200 1.0
+175 201 1.0
+175 202 1.0
+175 203 1.0
+175 204 1.0
+175 205 1.0
+175 206 1.0
+175 207 1.0
+175 208 1.0
+175 209 1.0
+175 210 1.0
+175 211 1.0
+175 212 1.0
+175 213 1.0
+175 214 1.0
+175 215 1.0
+175 216 1.0
+175 217 1.0
+175 218 1.0
+175 219 1.0
+175 220 1.0
+175 221 1.0
+175 145 1.0
+175 222 1.0
+175 223 1.0
+175 224 1.0
+175 225 1.0
+175 226 1.0
+175 227 1.0
+175 228 1.0
+175 229 1.0
+175 153 1.0
+175 230 1.0
+175 231 1.0
+233 234 1.0
+233 235 1.0
+233 236 1.0
+233 237 1.0
+233 238 1.0
+233 239 1.0
+233 240 1.0
+233 241 1.0
+233 242 1.0
+233 243 1.0
+233 244 1.0
+233 245 1.0
+233 246 1.0
+233 247 1.0
+233 248 1.0
+233 249 1.0
+233 250 1.0
+233 251 1.0
+233 252 1.0
+233 253 1.0
+233 254 1.0
+233 255 1.0
+233 256 1.0
+233 257 1.0
+233 258 1.0
+233 259 1.0
+233 260 1.0
+233 261 1.0
+233 262 1.0
+233 263 1.0
+233 264 1.0
+233 265 1.0
+233 266 1.0
+269 270 1.0
+269 271 1.0
+269 272 1.0
+269 273 1.0
+269 274 1.0
+269 275 1.0
+269 276 1.0
+269 277 1.0
+269 278 1.0
+269 279 1.0
+269 280 1.0
+269 281 1.0
+269 282 1.0
+269 283 1.0
+269 284 1.0
+269 285 1.0
+269 286 1.0
+269 287 1.0
+269 288 1.0
+269 289 1.0
+269 290 1.0
+269 291 1.0
+269 292 1.0
+269 293 1.0
+269 294 1.0
+269 295 1.0
+269 296 1.0
+269 297 1.0
+269 298 1.0
+269 299 1.0
+300 301 1.0
+300 302 1.0
+300 303 1.0
+300 304 1.0
+300 305 1.0
+300 306 1.0
+300 307 1.0
+300 308 1.0
+300 309 1.0
+300 310 1.0
+300 311 1.0
+300 312 1.0
+300 313 1.0
+300 314 1.0
+300 315 1.0
+300 316 1.0
+300 317 1.0
+300 318 1.0
+300 319 1.0
+300 320 1.0
+300 321 1.0
+325 326 1.0
+325 327 1.0
+325 328 1.0
+325 329 1.0
+325 330 1.0
+325 331 1.0
+333 334 1.0
+333 335 1.0
+333 336 1.0
+333 337 1.0
+338 339 1.0
+338 340 1.0
+338 341 1.0
+338 342 1.0
+338 343 1.0
+338 344 1.0
+345 346 1.0
+345 347 1.0
+345 348 1.0
+345 349 1.0
+345 350 1.0
+345 351 1.0
+345 352 1.0
+345 353 1.0
+345 354 1.0
+345 355 1.0
+345 356 1.0
+345 357 1.0
+345 358 1.0
+359 360 1.0
+359 361 1.0
+359 362 1.0
+359 363 1.0
+359 364 1.0
+359 365 1.0
+359 366 1.0
+359 367 1.0
+359 368 1.0
+359 369 1.0
+359 370 1.0
+359 371 1.0
+359 372 1.0
+359 373 1.0
+359 374 1.0
+359 375 1.0
+359 376 1.0
+359 377 1.0
+359 378 1.0
+359 379 1.0
+359 380 1.0
+359 381 1.0
+359 382 1.0
+359 383 1.0
+359 384 1.0
+359 385 1.0
+359 386 1.0
+359 387 1.0
+359 388 1.0
+359 389 1.0
+359 390 1.0
+359 391 1.0
+359 392 1.0
+359 393 1.0
+359 394 1.0
+359 395 1.0
+359 135 1.0
+359 396 1.0
+359 397 1.0
+359 398 1.0
+359 399 1.0
+359 400 1.0
+359 401 1.0
+359 402 1.0
+359 403 1.0
+359 404 1.0
+359 405 1.0
+359 406 1.0
+359 407 1.0
+359 408 1.0
+359 409 1.0
+359 410 1.0
+359 411 1.0
+359 412 1.0
+359 413 1.0
+359 414 1.0
+359 415 1.0
+359 416 1.0

@@ -27,9 +27,18 @@ def get_children(se, parent):
 
 def dump_schema_graph(se, path):
 
+    # ensure node properties are not NULL
+    G = se.get_nx_schema()
+    for node in G.nodes(data = True):
+        for attribute, value in node[1].items():
+            if not value or value == "null":
+                value = "Not defined"
+                node[1][attribute] = value
+                
     # write out the networkx graph in GML format
     # R igraph should be able to read that
-    nx.write_pajek(se.get_nx_schema(), path)
+
+    nx.write_pajek(G, path)
 
 if __name__ == '__main__':
 

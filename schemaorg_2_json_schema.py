@@ -38,7 +38,7 @@ def dump_schema_graph(se, path):
     # write out the networkx graph in GML format
     # R igraph should be able to read that
 
-    nx.write_pajek(G, path)
+    nx.write_gml(G, path)
 
 if __name__ == '__main__':
 
@@ -55,6 +55,6 @@ if __name__ == '__main__':
 
     # serialize networkx graph into a standard format (Pajek)
     # readable in R igraph package
-    serialized_model_path = "./model.net" 
+    serialized_model_path = "./model.gml" 
     dump_schema_graph(se, serialized_model_path)
     print("Graph_saved as " + serialized_model_path)

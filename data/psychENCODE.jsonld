@@ -2119,211 +2119,211 @@
         {
             "@id": "bts:IndividualAccession",
             "@type": "rdf:Property",
-            "http://schema.org/domainIncludes": {
-                "@id": "bts:Individual"
-            },
-            "http://schema.org/rangeIncludes": {
-                "@id": "schema:Text"
-            },
             "rdfs:comment": "Unique donor ID assigned by DAC.DCC",
             "rdfs:label": "IndividualAccession",
+            "schema:domainIncludes": {
+                "@id": "bts:Individual"
+            },
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
+            },
+            "schema:rangeIncludes": {
+                "@id": "schema:Text"
             }
         },
         {
             "@id": "bts:IndividualID",
             "@type": "rdf:Property",
-            "http://schema.org/domainIncludes": {
-                "@id": "bts:Individual"
-            },
-            "http://schema.org/rangeIncludes": {
-                "@id": "schema:Text"
-            },
             "rdfs:comment": "Donor ID as provided by lab",
             "rdfs:label": "IndividualID",
+            "schema:domainIncludes": {
+                "@id": "bts:Individual"
+            },
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
+            },
+            "schema:rangeIncludes": {
+                "@id": "schema:Text"
             }
         },
         {
             "@id": "bts:IndividualIDSource",
             "@type": "rdf:Property",
-            "http://schema.org/domainIncludes": {
-                "@id": "bts:Individual"
-            },
-            "http://schema.org/rangeIncludes": {
-                "@id": "schema:Text"
-            },
             "rdfs:comment": "Brain bank or other repository to which individualID maps",
             "rdfs:label": "IndividualIDSource",
+            "schema:domainIncludes": {
+                "@id": "bts:Individual"
+            },
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
+            },
+            "schema:rangeIncludes": {
+                "@id": "schema:Text"
             }
         },
         {
             "@id": "bts:Species",
             "@type": "rdf:Property",
-            "http://schema.org/domainIncludes": {
-                "@id": "bts:Individual"
-            },
-            "http://schema.org/rangeIncludes": {
-                "@id": "schema:Text"
-            },
             "rdfs:comment": "The name of this Individual species",
             "rdfs:label": "Species",
+            "schema:domainIncludes": {
+                "@id": "bts:Individual"
+            },
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
+            },
+            "schema:rangeIncludes": {
+                "@id": "schema:Text"
             }
         },
         {
             "@id": "bts:ReportedGender",
             "@type": "rdf:Property",
-            "http://schema.org/domainIncludes": {
-                "@id": "bts:Individual"
-            },
-            "http://schema.org/rangeIncludes": {
-                "@id": "schema:Text"
-            },
             "rdfs:comment": "Gender as reported by brain bank",
             "rdfs:label": "ReportedGender",
+            "schema:domainIncludes": {
+                "@id": "bts:Individual"
+            },
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
+            },
+            "schema:rangeIncludes": {
+                "@id": "schema:Text"
             }
         },
         {
             "@id": "bts:Sex",
             "@type": "rdf:Property",
-            "http://schema.org/domainIncludes": {
-                "@id": "bts:Individual"
-            },
-            "http://schema.org/rangeIncludes": {
-                "@id": "schema:Text"
-            },
             "rdfs:comment": "SNP Genotype",
             "rdfs:label": "Sex",
+            "schema:domainIncludes": {
+                "@id": "bts:Individual"
+            },
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
+            },
+            "schema:rangeIncludes": {
+                "@id": "schema:Text"
             }
         },
         {
             "@id": "bts:Age",
             "@type": "rdf:Property",
-            "http://schema.org/domainIncludes": {
-                "@id": "bts:Individual"
-            },
-            "http://schema.org/rangeIncludes": {
-                "@id": "schema:Text"
-            },
             "rdfs:comment": "Age of individual at biospecimen sampling - age of death for postmortem tissue",
             "rdfs:label": "Age",
+            "schema:domainIncludes": {
+                "@id": "bts:Individual"
+            },
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
+            },
+            "schema:rangeIncludes": {
+                "@id": "schema:Text"
             }
         },
         {
             "@id": "bts:AgeUnits",
             "@type": "rdf:Property",
-            "http://schema.org/domainIncludes": {
-                "@id": "bts:Individual"
-            },
-            "http://schema.org/rangeIncludes": {
-                "@id": "schema:Text"
-            },
             "rdfs:comment": "The unit of measurement (gestational week or year)",
             "rdfs:label": "AgeUnits",
+            "schema:domainIncludes": {
+                "@id": "bts:Individual"
+            },
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
+            },
+            "schema:rangeIncludes": {
+                "@id": "schema:Text"
             }
         },
         {
             "@id": "bts:Race",
             "@type": "rdf:Property",
-            "http://schema.org/domainIncludes": {
-                "@id": "bts:Individual"
-            },
-            "http://schema.org/rangeIncludes": {
-                "@id": "schema:Text"
-            },
             "rdfs:comment": "A person’s social group identification",
             "rdfs:label": "Race",
+            "schema:domainIncludes": {
+                "@id": "bts:Individual"
+            },
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
+            },
+            "schema:rangeIncludes": {
+                "@id": "schema:Text"
             }
         },
         {
             "@id": "bts:RaceDetail",
             "@type": "rdf:Property",
-            "http://schema.org/domainIncludes": {
-                "@id": "bts:Individual"
-            },
-            "http://schema.org/rangeIncludes": {
-                "@id": "schema:Text"
-            },
             "rdfs:comment": "Hispanic or Latino and Not Hispanic or Latino",
             "rdfs:label": "RaceDetail",
+            "schema:domainIncludes": {
+                "@id": "bts:Individual"
+            },
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
+            },
+            "schema:rangeIncludes": {
+                "@id": "schema:Text"
             }
         },
         {
             "@id": "bts:GenotypeInferredAncestry",
             "@type": "rdf:Property",
-            "http://schema.org/domainIncludes": {
-                "@id": "bts:Individual"
-            },
-            "http://schema.org/rangeIncludes": {
-                "@id": "schema:Text"
-            },
             "rdfs:comment": "Ancestry inferred from genotype",
             "rdfs:label": "GenotypeInferredAncestry",
+            "schema:domainIncludes": {
+                "@id": "bts:Individual"
+            },
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
+            },
+            "schema:rangeIncludes": {
+                "@id": "schema:Text"
             }
         },
         {
             "@id": "bts:IQ",
             "@type": "rdf:Property",
-            "http://schema.org/domainIncludes": {
-                "@id": "bts:Individual"
-            },
-            "http://schema.org/rangeIncludes": {
-                "@id": "schema:Text"
-            },
             "rdfs:comment": "Individuals IQ",
             "rdfs:label": "IQ",
+            "schema:domainIncludes": {
+                "@id": "bts:Individual"
+            },
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
+            },
+            "schema:rangeIncludes": {
+                "@id": "schema:Text"
             }
         },
         {
             "@id": "bts:BMI",
             "@type": "rdf:Property",
-            "http://schema.org/domainIncludes": {
-                "@id": "bts:Individual"
-            },
-            "http://schema.org/rangeIncludes": {
-                "@id": "schema:Text"
-            },
             "rdfs:comment": "Body Mass Index",
             "rdfs:label": "BMI",
+            "schema:domainIncludes": {
+                "@id": "bts:Individual"
+            },
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
+            },
+            "schema:rangeIncludes": {
+                "@id": "schema:Text"
             }
         },
         {
             "@id": "bts:BMI",
             "@type": "rdf:Property",
-            "http://schema.org/domainIncludes": {
-                "@id": "bts:Individual"
-            },
-            "http://schema.org/rangeIncludes": {
-                "@id": "schema:Text"
-            },
             "rdfs:comment": "Body Mass Index",
             "rdfs:label": "BMI",
+            "schema:domainIncludes": {
+                "@id": "bts:Individual"
+            },
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
+            },
+            "schema:rangeIncludes": {
+                "@id": "schema:Text"
             }
         },
         {

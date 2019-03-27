@@ -5408,11 +5408,11 @@
         {
           "@id": "sms:requiresChild",
           "@type": "rdf:Property",
-          "http://schema.org/domainIncludes": {
-            "@id": "http://schema.org/Thing"
+          "schema:domainIncludes": {
+            "@id": "bts:ResourceType"
           } ,
-          "http://schema.org/rangeIncludes": {
-            "@id": "http://schema.org/Boolean"
+          "schema:rangeIncludes": {
+            "@id": "schema:Boolean"
           },
         "rdfs:comment": "Indicates if use of a Thing requires one of its child classes  . Allowed values are <code>true</code> or <code>false</code>.",
         "rdfs:label": "requiresChild"

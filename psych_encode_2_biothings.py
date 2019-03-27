@@ -1,12 +1,14 @@
 import os
 import json
 import pprint
-from PIL import Image
+
+#from PIL import Image #use if you are visualizing model schema with graphviz
+#from graphviz import Source #use if you are visualizing model schema with graphviz
+#import matplotlib.pyplot as plt
+  
 from schema_explorer import SchemaExplorer
 import pprint as pp
-from graphviz import Source
 import networkx as nx
-import matplotlib.pyplot as plt
 from networkx.drawing.nx_agraph import to_agraph
 
 def get_descendents_subgraph(G, node_id):
@@ -49,7 +51,6 @@ def get_property(property_name, property_class_name, description = None, allowed
                     'rdfs:label': property_name,
                     'schema:domainIncludes': {'@id': 'bts:' + property_class_name},
                     'schema:rangeIncludes': {'@id': 'schema:' + allowed_values},
-
                     'schema:isPartOf': {'@id': 'http://schema.biothings.io'},
     }
                     
@@ -66,27 +67,40 @@ def first_upper(s):
 
 annotations_path = "./data"
 annotations_file = "psychENCODE.json"
+base_sage_schema_file = "masterSage.jsonld"
 
 
 # instantiate schema explorer
 se = SchemaExplorer()
 
-# visualize default schema
+# visualize biothings schema
+print("Visualizing BioThings schema...")
 full_schema = se.full_schema_graph()
 full_schema.render(filename=os.path.join(annotations_path, "biothings_schema.pdf"), view = True)
+print("Done")
+
+
+# load Sage annotations (that have been converted to JSON-LD; note that although a large set has been already converted
+# there are still annotation subsets that haven't been included)
+
+se.load_schema(os.path.join(annotations_path, base_sage_schema_file))
+
+# visualize default base Sage schema
+print("Visualizing master Sage extension schema...")
+full_schema = se.full_schema_graph()
+full_schema.engine = "fdp"
+full_schema.render(filename=os.path.join(annotations_path, "master_sage_schema.pdf"), view = True)
+print("Done")
+
+print("Adding psychENCODE nodes...")
 
 '''
 # add classes matching psychENCODE manifest specifications to biothings base ontology
 # for now we are hard-coding definitions; however, in the future we should have URI for each term and definition used in a dictionary
-# e.g. https://schema.org/docs/schema_org_rdfa.html
+# e.g. see https://schema.org/docs/schema_org_rdfa.html
 '''
 
-new_class = get_class("Assay",\
-          description = "The technology used to generate the data in this file",\
-          subclass_of = "Thing"\
-)
-se.update_class(new_class)
-
+# please check if these class already exist in the masterSage schema
 new_class = get_class("DataEntity",\
           description = "A data derived entity and attributes.",\
           subclass_of = "EvidenceType"\
@@ -120,12 +134,6 @@ new_class = get_class("ProteomicEntity",\
 se.update_class(new_class)
 
 
-class_info = se.explore_class("Device")
-edit_class = get_class("Device",\
-          description =  class_info["description"],\
-          subclass_of = "Assay"\
-)
-se.edit_class(edit_class)
 
 new_class = get_class("Organization",\
           description =  "An organization such as a school, NGO, corporation, club, etc." ,\
@@ -249,11 +257,6 @@ new_property = get_property("BMI",\
 )
 se.update_property(new_property)
 
-new_property = get_property("BMI",\
-                            "Individual",\
-                            description = "Body Mass Index"\
-)
-se.update_property(new_property)
 
 
 new_class = get_class("Diagnosis",\
@@ -348,19 +351,26 @@ agraph.draw("colored_model.pdf")
 #img.show()
 '''
 
+'''
+# example of class exploration
 pp = pprint.PrettyPrinter(indent=4)
 class_info = se.explore_class('Individual')
 pp.pprint(class_info)
-
+'''
 schema_name = annotations_file.split(".")[0] 
 
+print("Visualizing psychENCODE schema...")
 full_schema = se.full_schema_graph()
 full_schema.engine = "fdp"
 full_schema.render(filename=os.path.join(annotations_path, schema_name + "_schema.pdf"), view = True)
+print("Done")
 
 """
+# example of visualizing part of a schema
 partial_schema = se.sub_schema_graph(source="Assay", direction="down")
 partial_schema.engine = "circo"
 partial_schema.render(filename=os.path.join(annotations_path, schema_name + "_partial_schema.pdf"), view = True)
 """
+
+# saving schema
 se.export_schema(os.path.join(annotations_path, schema_name + ".jsonld"))

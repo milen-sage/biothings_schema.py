@@ -5422,7 +5422,7 @@
             "@type": "rdfs:Class",
             "rdfs:comment": "The type of resource being stored and annotated",
             "rdfs:label": "ResourceType",
-            "sms:requiresChild":"false",
+            "sms:requiresChild":"true",
             "rdfs:subClassOf": {
                 "@id": "bts:EvidenceType"
             },

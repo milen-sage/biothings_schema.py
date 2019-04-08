@@ -1,9 +1,29 @@
 import os
 import json
 
+from PIL import Image
 from schema_explorer import SchemaExplorer
 import pprint as pp
 from graphviz import Source
+import networkx as nx
+import matplotlib.pyplot as plt
+from networkx.drawing.nx_agraph import to_agraph
+
+def get_descendents_subgraph(G, node_id):
+
+    s = [node_id]
+    for v in dict(nx.bfs_successors(G, node_id)).values():
+        s += v
+    s = set(s)
+
+    return G.subgraph(s)
+
+
+def topic_node_style(G, node_id):
+
+    G.node[node_id]["shape"] = "tripleoctagon"
+    G.node[node_id]["fontsize"] = "52"
+    G.node[node_id]["fontname"] = "Arial bold"
 
 
 def get_class(class_name, description = None, subclass_of = "Thing"):
@@ -138,12 +158,55 @@ for annotations_entity in synapse_annotations:
                 se.update_class(new_class)
 
 
+
+nx.set_node_attributes(se.schema_nx, "red",  "fillcolor")
+
+color1_subgraph = get_descendents_subgraph(se.schema_nx, "Assay")
+
+nx.set_node_attributes(color1_subgraph, "#990000",  "fillcolor")
+nx.set_node_attributes(color1_subgraph, "#990000",  "color")
+nx.set_edge_attributes(color1_subgraph,"#990000", "color")  
+nx.set_node_attributes(color1_subgraph, "32",  "fontsize")
+
+topic_node_style(color1_subgraph, "Assay")
+
+
+color2_subgraph = get_descendents_subgraph(se.schema_nx, "Platform")
+
+nx.set_node_attributes(color2_subgraph, "#ff9900",  "fillcolor")
+nx.set_node_attributes(color2_subgraph, "#ff9900",  "color")
+nx.set_edge_attributes(color2_subgraph,"#ff9900", "color")  
+topic_node_style(color2_subgraph, "Platform")
+
+
+color3_subgraph = get_descendents_subgraph(se.schema_nx, "AssayTarget")
+
+topic_node_style(color3_subgraph, "AssayTarget")
+#topic_node_style(color3_subgraph, "CellType")
+
+nx.set_node_attributes(color3_subgraph, "#006600",  "fillcolor")
+nx.set_node_attributes(color3_subgraph, "#006600",  "color")
+nx.set_edge_attributes(color3_subgraph,"#006600", "color")  
+
+display_subgraph = get_descendents_subgraph(se.schema_nx, "Assay")
+
+#topic_node_style(display_subgraph, "AnatomicalEntity")
+
+agraph = to_agraph(display_subgraph)
+agraph.graph_attr['overlap']='false'
+agraph.node_attr['style'] = "filled"
+agraph.layout(prog = "fdp")
+agraph.draw("color.pdf")
+#img = Image.open('color.png')
+#img.show()
+'''
 full_schema = se.full_schema_graph()
 full_schema.engine = "fdp"
 full_schema.render(filename=os.path.join(annotations_path, annotations_file + "schema.gv.pdf"), view = True)
 
-partial_schema = se.sub_schema_graph(source="DataEntity", direction="both")
+partial_schema = se.sub_schema_graph(source="Assay", direction="down")
 partial_schema.engine = "circo"
 partial_schema.render(filename=os.path.join(annotations_path, annotations_file + "partial_schema.gv.pdf"), view = True)
-
+'''
 se.export_schema(os.path.join(annotations_path, annotations_file + "ld"))
+

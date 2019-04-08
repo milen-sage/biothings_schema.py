@@ -5,6 +5,8 @@ import networkx as nx
 import graphviz
 from jsonschema import validate
 
+from copy import deepcopy
+
 _ROOT = os.path.abspath(os.path.dirname(__file__))
 
 
@@ -18,7 +20,6 @@ def load_json(file_path):
 
     :arg str file_path: The path of the url doc, could be url or file path
     """
-    # handle url
     if file_path.startswith("http"):
         with urllib.request.urlopen(file_path) as url:
             data = json.loads(url.read().decode())
@@ -91,8 +92,22 @@ def load_schema_into_networkx(schema):
     G = nx.DiGraph()
     for record in schema["@graph"]:
         if record["@type"] == "rdfs:Class":
+            '''
+            node = deepcopy(record)
+            del node['rdfs:label']
+            del node['@type']
+            del node['@id']
+
+            node = dict((k.split(":")[1]
+, value) for (k, value) in node.items())
+
+            G.add_node(record['rdfs:label'], **node)
+            '''
+
             G.add_node(record['rdfs:label'], uri=record["@id"],
                        description=record["rdfs:comment"])
+            
+
             if "rdfs:subClassOf" in record:
                 parents = record["rdfs:subClassOf"]
                 if type(parents) == list:

@@ -4,6 +4,7 @@ import json
 from schema_explorer import SchemaExplorer
 import pprint as pp
 from graphviz import Source
+import matplotlib.pyplot as plt
 import networkx as nx
 
 def load_schemaorg_model(model_path):
@@ -12,11 +13,12 @@ def load_schemaorg_model(model_path):
     se = SchemaExplorer()
     se.load_schema(model_path)
 
+    '''
     # visualize loaded schema
     full_schema = se.full_schema_graph()
     full_schema.engine = "fdp"
     full_schema.render(filename=os.path.basename("schema.org.model.pdf"), view = True)
-
+    '''
     return se
 
 
@@ -40,6 +42,21 @@ def dump_schema_graph(se, path):
 
     nx.write_gml(G, path)
 
+def get_requirements_graph(se, requirements_type = ["requiresChild"]):
+
+    G = se.get_nx_schema()
+
+    req_subgraph = set()
+    for node in G.nodes(data = True):
+        for attribute, value in node[1].items():
+            print(attribute)
+            if "sms:"+attribute in requirements_type and value == "true":
+                req_subgraph.add(node[0])
+
+    return G.subgraph(req_subgraph) 
+
+
+
 if __name__ == '__main__':
 
 
@@ -52,6 +69,16 @@ if __name__ == '__main__':
 
     # get children of a schema.org class/entity
     class_children = get_children(se, "ResourceType")
+
+    print(class_children)
+
+    #req_subgraph = get_requirements_graph(se)
+    
+    #print(list(req_subgraph.nodes()))
+
+    #nx.spring_layout(req_subgraph) 
+
+    #plt.show()
 
     # serialize networkx graph into a standard format (Pajek)
     # readable in R igraph package

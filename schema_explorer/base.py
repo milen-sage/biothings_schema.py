@@ -89,34 +89,55 @@ def extract_name_from_uri_or_curie(item):
 
 
 def load_schema_into_networkx(schema):
-    G = nx.DiGraph()
+    G = nx.MultiDiGraph()
     for record in schema["@graph"]:
         if record["@type"] == "rdfs:Class":
+            
+            #node = deepcopy(record)
+            node = {}
+            #del node['rdfs:label']
+            #del node['@type']
+            #del node['@id']
+
+            for (k, value) in record.items():
+                if ":" in k:
+                    key = k.split(":")[1]
+                    node[key] = value
+                elif "@" in k:
+                    key = k[1:]
+                    node[key] = value
+                else:
+                    node[k] = value
+
             '''
-            node = deepcopy(record)
-            del node['rdfs:label']
-            del node['@type']
-            del node['@id']
-
-            node = dict((k.split(":")[1]
-, value) for (k, value) in node.items())
-
-            G.add_node(record['rdfs:label'], **node)
-            '''
-
             G.add_node(record['rdfs:label'], uri=record["@id"],
                        description=record["rdfs:comment"])
-            
+            '''
 
             if "rdfs:subClassOf" in record:
                 parents = record["rdfs:subClassOf"]
                 if type(parents) == list:
                     for _parent in parents:
-                        G.add_edge(extract_name_from_uri_or_curie(_parent["@id"]),
-                                   record["rdfs:label"])
+                        G.add_edge(extract_name_from_uri_or_curie(_parent["@id"]), record["rdfs:label"], relationship = "parentOf")
                 elif type(parents) == dict:
-                    G.add_edge(extract_name_from_uri_or_curie(parents["@id"]),
-                               record["rdfs:label"])
+                    G.add_edge(extract_name_from_uri_or_curie(parents["@id"]), record["rdfs:label"], relationship = "parentOf")
+
+            if "rdfs:requiresDependency" in record:
+                parents = record["rdfs:requiresDependency"]
+                if type(parents) == list:
+                    for _parent in parents:
+                        G.add_edge(extract_name_from_uri_or_curie(_parent["@id"]), record["rdfs:label"], relationship = "requiresDependency")
+                elif type(parents) == dict:
+                    G.add_edge(extract_name_from_uri_or_curie(parents["@id"]), record["rdfs:label"], relationship = "requiresDependency")
+                #print(G.edges(extract_name_from_uri_or_curie(parents["@id"]), data = True))
+            
+            if "requiresChildAsValue" in node and node["requiresChildAsValue"]["@id"] == "sms:True":
+                node["requiresChildAsValue"] = True
+            
+            print(node)
+                 
+            G.add_node(record['rdfs:label'], **node)
+
     return G
 
 
